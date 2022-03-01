@@ -1,0 +1,255 @@
+@charset "UTF-8";
+
+/* -------사이트 전체 적용------- */
+body, div, ul, li, dl, dt, ol, h1, h2, h3, h4, h5, 
+h6, input, fieldset, legend, p, select, table, th, 
+td, tr, textarea, button, form {
+    margin: 0; padding: 0; box-sizing: border-box;
+}
+/* clearfix */
+.clearfix{*zoom:1;}
+.clearfix:before, .clearfix:after {display: block; content: ""; line-height: 0;}
+.clearfix:after {clear: both;}
+
+#wrap {
+    width: 1130px;
+    margin: 0px auto;
+}
+
+/* 책 제목 (큰 글씨)*/
+@font-face {
+    font-family: 'KOHIBaeumOTF';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/KOHIBaeumOTF.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* 책 설명 (고딕)*/
+@font-face {
+    font-family: 'MinSans-Medium';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/MinSans-Medium.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    font-family: 'MinSans-Medium';
+    font-size: 12px;
+}
+.container{
+    width:1000px !important;
+}
+
+/*************공통 action**************/
+a:hover{
+    cursor: pointer;
+}
+
+
+
+/* ---------------레이아웃-------------- */
+#header {
+    /* background-color: aqua; */
+    /* border: 2px solid #000000; */
+    padding: 30px 0px 30px 0px;
+    /* border-bottom: 2px solid #dddddd; */
+}
+
+#contents {
+    padding: 10px 0px 40px 0px;
+    margin-bottom: 40px;
+
+    border-bottom-style: solid;
+    border-bottom-width: 2px;
+    border-bottom-color: #e4e4e4;
+}
+
+/* ---------헤더---------- */
+#header {
+    background-color: #FFFFFF;
+    transition: opacity 1s;
+}
+
+#header>a>img {
+    float: left;
+    width: 110px;
+    margin: 0px 40px 0px 10px;
+    cursor:pointer;
+}
+
+#header>ul>span>.img-circle {
+    width: 30px;
+    height: 30px;
+    cursor:pointer;
+}
+
+#header>ul>span {
+    cursor:pointer;
+}
+
+#header ul {
+    float: right;
+    margin: 5px 15px 0px 0px;
+}
+
+#header>ul>a {
+    padding: 0px 10px 0px 0px;
+}
+/* -------------content---------------- */
+#join-header>.col-xs-5{
+    border-bottom: 1px solid #B4B0B0 !important;
+    height: 100px;
+    padding: 30px 15px 130px 15px;
+}
+#join-hello  div{
+    font-family: 'KOHIBaeumOTF';
+    color: #707070;
+    font-size: 30px;
+}
+#join-header>.col-xs-1>div{
+    margin: 0 auto;
+    text-align:center;
+    padding: 145px 0px 0px 0px;
+}
+#join-api>div{
+    border : 1px solid #d4d4d4;
+    margin : 0px 0px 5px 0px;
+    padding: 10px 0px;
+    border-radius: 3px;
+}
+#join-api>div>div{
+    margin : 0 auto;
+    text-align: center;
+    font-weight: bold;
+    color: #707070;
+    font-size: 15px;
+}
+#join-api>div>div:hover{
+    cursor: pointer;
+}
+#join-api img {
+    width: 15px;
+    vertical-align: top;
+    margin-top: 2px;
+}
+
+
+/* -------------form--------------- */
+::placeholder { 
+    color: #B4B0B0;
+}
+#join-content{
+    width: 900;
+    margin: 20px 0px;
+}
+#join-content form div{
+    font-size: 15px;
+    margin : 10px 0px;
+    color: #707070;
+}
+#join-content form p{
+    font-size: 12px;
+    margin : 10px 5px;
+    color: red;
+}
+#join-content form input {
+    margin-bottom: 20px;
+    width: 800px;
+    height: 40px;
+    border-radius: 5px;
+    border: 1px solid #d4d4d4;
+    padding-left: 12px;
+}
+#join-content form .except {
+    margin-bottom: 20px;
+}
+#join-content form .except input{
+    margin-bottom: 0px;
+    width: 800px;
+    height: 40px;
+    border-radius: 5px;
+    border: 1px solid #d4d4d4;
+}
+
+/* 장르박스 */
+#genrebox span{
+    display: block;
+    margin-top: 20px;
+}
+#genrebox .box{
+    display: inline-block;
+    height: 180px; width:180px;
+    border-radius:12px;
+    margin: 15px 10px;
+    color:#ffffff !important;
+    text-align :left;
+    padding: 15px;
+    font-size: 20px !important;
+}
+#genrebox .box:hover{
+    cursor: pointer;
+}
+#genrebox #love{
+    background-color : #ED3EE6;    
+}
+#genrebox #spectacle{
+    background-color : #FF7F00;    
+}
+#genrebox #impressive{
+    background-color : #4FB0F7;    
+}
+#genrebox #horor{
+    background-color : #AC0808;    
+}
+#genrebox #calm{
+    background-color : #4DB3C6;    
+}
+#genrebox #encouraging{
+    background-color : #E50F0F;    
+}
+#genrebox #touching{
+    background-color : #007BF5;    
+}
+#genrebox #fantastic{
+    background-color : #FF6CD2;    
+}
+#genrebox .clicked {
+    background-color : gold !important;
+    color: red !important;
+    font-weight: bold;
+    border : 3px solid red;
+    margin: 12px 10px !important;
+    cursor:pointer;
+}
+
+#join-content button{
+    margin-top: 40px;
+    width: 800px;
+    height: 50px;
+    background-color: #2699FB;
+    border: none;
+    border-radius: 7px;
+    font-size: 15px;
+    color: #FFFFFF;
+}
+
+
+/* --------------footer------------- */
+#footer {
+    margin: 50px 0px 60px 0px;
+    border-top : 2px solid #e4e4e4;
+    padding: 15px 0px 0px 0px;
+    color: #666666;
+}
+#footer>div{
+    float: left;
+}
+#footer>a {
+    float: right;
+    margin: 18px 10px 0px 0px;
+}
+
+
+
+
+

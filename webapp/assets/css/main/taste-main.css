@@ -1,0 +1,369 @@
+@charset "UTF-8";
+
+/* -------사이트 전체 적용------- */
+body, div, ul, li, dl, dt, ol, h1, h2, h3, h4, h5, 
+h6, input, fieldset, legend, p, select, table, th, 
+td, tr, textarea, button, form {
+    margin: 0; padding: 0;
+}
+/* clearfix */
+.clearfix{*zoom:1;}
+.clearfix:before, .clearfix:after {display: block; content: ""; line-height: 0;}
+.clearfix:after {clear: both;}
+
+#wrap {
+    width: 1130px;
+    margin: 0px auto;
+}
+
+/* 책 제목 (큰 글씨)*/
+@font-face {
+    font-family: 'KOHIBaeumOTF';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/KOHIBaeumOTF.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* 책 설명 (고딕)*/
+@font-face {
+    font-family: 'MinSans-Medium';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/MinSans-Medium.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    font-family: 'MinSans-Medium';
+    font-size: 12px;
+}
+.container{
+    width:1130px !important;
+}
+
+/*************공통 action**************/
+a:hover{
+    cursor: pointer;
+}
+/* 말줄임 */
+.word {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 5;
+    -webkit-box-orient: vertical;
+
+    white-space: normal;
+    word-wrap : break-word; 
+    /* line-height: 1.2; */
+}
+
+
+/* ---------------레이아웃-------------- */
+#header {
+    /* background-color: aqua; */
+    /* border: 2px solid #000000; */
+    padding: 30px 0px 30px 0px;
+    /* border-bottom: 2px solid #dddddd; */
+}
+
+#contents {
+    padding: 10px 0px 40px 0px;
+    margin-bottom: 40px;
+
+    border-bottom-style: solid;
+    border-bottom-width: 2px;
+    border-bottom-color: #e4e4e4;
+}
+
+/* ---------헤더---------- */
+#header {
+    background-color: #FFFFFF;
+    transition: opacity 1s;
+}
+
+#header>a>img {
+    float: left;
+    width: 110px;
+    margin: 0px 40px 0px 10px;
+    cursor:pointer;
+}
+
+#header>ul>span>.img-circle {
+    width: 30px;
+    height: 30px;
+    cursor:pointer;
+}
+
+#header>ul>span {
+    cursor:pointer;
+}
+
+#header ul {
+    float: right;
+    margin: 5px 15px 0px 0px;
+}
+
+#header>ul>a {
+    padding: 0px 10px 0px 0px;
+}
+
+/* ------------nav---------------- */
+#nav {
+    padding: 5px 0px 5px 0px;
+}
+#nav li{
+    font-size: 18px;
+    font-weight: bold;
+}
+
+
+/****************nav2*****************/
+#nav2>li{
+    width: 115px;
+    text-align: center;
+    font-size: 15px;
+    
+}
+#nav2>li.active>a{
+    background-color: none;
+    color: #2699FB;
+    font-weight: bold;
+}
+
+/******************content********************/
+#content{
+    padding: 20px 25px;
+}
+.left{
+    float: left;
+}
+.right{
+    float: right;
+}
+/**********컨텐츠 공통**********/
+#content>div{
+    margin-bottom: 20px;
+}
+#content>div>div{
+    margin-bottom: 30px;
+}
+.minicontent{
+    width: 1080px;
+    height: 25px;
+}
+.minicontent div p{
+    display: inline-block;
+    font-weight: bold;
+    font-size: 20px;
+    color : #707070;
+    
+}
+.minicontent>#more>p{
+    font-size: 15px;
+    color: #ABAAAC;
+    margin-top: 5px;
+    
+}
+
+
+/*************컨텐츠1 : 서평****************/
+#reviews{
+    width: 1050px;
+    margin : 15px 10px;
+    background-color: #e7e7e7;
+    padding : 15px 30px;
+    border-radius: 15px;
+}
+#reviews-header{
+    /*********리뷰박스크기따라조정할것*********/
+    width: 990px;
+    height : 25px;
+    margin-bottom : 3px;
+}
+#reviews-header>div>p{
+    font-size: 17px;
+    font-weight: bold;
+    color: #707070;
+}
+#reviews-header .right{
+    padding:5px 3px 0px 0px;
+}
+#reviews-header>div>a{
+    margin-left: 5px;
+    color: #888888;
+    font-size: 12px;
+}
+#reviewer{
+    margin: 0px 0px 5px 0px;
+}
+#reviewer>a{
+    font-size: 12px;
+    color: #707070;
+}
+#reviews-content{
+    color: #909090;
+    border-bottom: 1px solid #B4B4B4; 
+    padding: 0px 0px 10px 0px;
+    margin: 0px 0px 10px 0px;
+}
+#reviews-content>p{
+    width: 800px;
+    margin-bottom: 5px;
+}
+#reviews-content>span{
+    margin-top: 3px;
+    background-color: #309BF8; 
+}
+#reviews-footer{
+    /*********리뷰박스크기따라조정할것*********/
+    width: 990px;
+    height : 15px;
+    color: #ABAAAC;
+    margin-top : 10px;
+}
+#reviews-footer span{
+    margin-right : 5px;
+}
+#reviews-footer #heart{
+    color: #309BF8;
+    padding: 2px 0px 0px 5px;
+}
+#reviews-footer .dropup a{
+    color: #707070;
+}
+#reviews-footer .dropup li a{
+    color:#B4B4B4 !important;
+    padding: 3px 10px !important;
+    width: 180px;
+}
+#reviews-footer .dropup li a span{
+    float:right;
+    padding-right: 10px;
+}
+#reviews-footer #plus{
+    font-size: 20px;
+}
+
+/*************컨텐츠2:작가*****************/
+#content2>div{
+    text-align: center;
+}
+#content2>div>.likewriter{
+    display: inline-block;
+    width: 250px;
+    height: 400px;
+    margin: 5px 5px;
+    background-color: #e7e7e7;
+    border-radius: 15px;
+    text-align: center;
+}
+#content2>div>.likewriter>img{
+    display:inline-block;
+    margin-top: 60px;
+    border:3px solid #309BF8;
+    height:120px;
+    width:120px;
+}
+#writerinfo>h1{
+    margin-top: 10px;
+    font-size: 15px;
+    font-weight: bold;
+    color:#707070;
+}
+#writerinfo>p{
+    margin-top: 3px;
+    font-size: 13px;
+    color:#919191;
+}
+.likewriter>p{
+    margin: 20px 0px;
+    width: 250px;
+    height: 100px;
+    padding: 10px 50px;
+    text-align: center;
+    font-size: 13px;
+    color:#707070; 
+}
+
+
+/***********컨텐츠3************/
+#content3>#background>div{
+    margin-bottom: 20px;
+    background:linear-gradient(#FFFFFF00, #EAEAEA);
+    padding: 0px 10px;
+    text-align: center;
+}
+#content3>div img{
+    display:inline-block;
+    width: 190px;
+    height: 276px;
+    margin: 10px 5px 0px 5px;
+}
+
+/**************컨텐츠4****************/
+.index{
+    font-size: 15px;
+    color: #ABAAAC;
+    margin-left: 35px;
+}
+
+/*gallery*/
+#content4 #playlist{
+    padding: 0px 30px;
+    text-align: center;
+}
+
+.nail{
+    display: inline-block;
+    width: 180px;
+    height: 180px;
+    border-radius: 12px;
+    color:#ffffff;
+    text-align: left;
+    margin: 10px;
+}
+.nail>div{
+    display: table;
+    width: 180px;
+    height: 100px;
+}
+
+.purple{
+    background-color : #7656FD;
+}
+.deeppurple{
+    background-color : #63307E;
+}
+.green{
+    background-color:  #31A848;
+}
+
+.nail-desc{
+    padding:16px;
+    font-size: 14px;
+}
+
+#opac{
+    display: table-cell;
+    vertical-align: bottom;
+    background : #ffffff7c;
+    height: 80px; width:180px;
+    border-bottom-right-radius:12px;
+    border-bottom-left-radius:12px;
+
+}
+
+/****************footer******************/
+#footer {
+    margin: 50px 0px 60px 0px;
+    border-top : 2px solid #e4e4e4;
+    padding: 15px 0px 0px 0px;
+    color: #666666;
+}
+
+#footer>a {
+    float: right;
+    margin-right: 10px;
+}
+
+

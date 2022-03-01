@@ -15,8 +15,8 @@
         <script type="text/javascript" src="${pageContext.request.contextPath}/assets/bootstrap/js/bootstrap.js"></script>
 
         <link rel="stylesheet" href="${pageContext.request.contextPath}/assets/css/source/source.css" type="text/css">
-        <link rel="stylesheet" href="${pageContext.request.contextPath}/assets/css/bookDetail/bookDetail.css" type="text/css">
-        <link rel="stylesheet" href="${pageContext.request.contextPath}/assets/css/bookDetail/bookDetailModal.css" type="text/css">
+        <link rel="stylesheet" href="${pageContext.request.contextPath}/assets/css/bookStorage/bookDetail.css" type="text/css">
+        <link rel="stylesheet" href="${pageContext.request.contextPath}/assets/css/bookStorage/bookDetailModal.css" type="text/css">
 
         <!-- kakao sdk 호출 -->
         <script src="https://developers.kakao.com/sdk/js/kakao.js"></script>

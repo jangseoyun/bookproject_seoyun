@@ -1,0 +1,549 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Nanum+Myeongjo&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nanum+Brush+Script&family=Nanum+Myeongjo&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Do+Hyeon&family=Nanum+Brush+Script&family=Nanum+Myeongjo&display=swap");
+
+/************************* 
+container 
+**************************/
+.container {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+}
+
+.slide-container {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+.slide {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  /***********************/
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  /***********************/
+  position: absolute;
+  /***********************/
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  /***********************/
+  transition: all 0.25s ease-in-out;
+}
+.dim {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  transition: all 0.3s ease-in;
+}
+.show-dim {
+  z-index: 3;
+  background-color: rgba(224, 221, 209, 0.7);
+  display: block;
+  opacity: 1;
+}
+
+/****************** container > slide > review, username, button ****************/
+.review {
+  width: 70%;
+  font-size: 2rem;
+  line-height: 3rem;
+  color: #fff;
+}
+.username {
+  padding: 1.5rem 0;
+  color: white;
+}
+.slideBtnContainer button {
+  border: 1px solid #fff;
+  background: rgba(0, 0, 0, 0.3);
+  padding: 0.5rem;
+  border-radius: 0.3rem;
+  cursor: pointer;
+  margin: 0 1.5rem;
+  width: 12rem;
+  background: #dddddd39;
+  color: white;
+}
+.slideBtnContainer button i {
+  font-size: 1.2rem;
+  margin-left: 1rem;
+  color: white;
+}
+/************************* container > upDown btn ***********************/
+.upDown-container {
+}
+.upDown-container button {
+  z-index: 2;
+  background: transparent;
+  cursor: pointer;
+  position: absolute;
+  font-size: 3rem;
+  border: none;
+  color: #fff;
+  opacity: 0.6;
+}
+.upDown-container .fa-solid {
+  /* width: 100%;
+  height: 100%;
+  font-size: 1rem;*/
+}
+.upDown-container .upBtn {
+  left: 50%;
+  transform: translateX(-50%);
+  top: 3rem;
+}
+.upDown-container .downBtn {
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 3rem;
+}
+.upDown-container .autoModeBtn {
+  bottom: 1rem;
+  right: 1rem;
+}
+/***************** header ****************/
+header {
+  position: fixed;
+  width: 100vw;
+  z-index: 1;
+}
+/****************** header > nav ******************/
+nav {
+  top: 0;
+  left: 0;
+  width: 100%;
+  /* background: rgba(0, 0, 0, 0.5);
+box-shadow: 4px 4px 10px gray; */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 1.5rem;
+  z-index: 2;
+}
+
+.logo {
+  line-height: 100%;
+  color: #fff;
+}
+/**************** header > button ****************/
+header .sidebarBtn {
+  margin-left: 1.5rem;
+  background: transparent;
+  border: none;
+  width: 2rem;
+  height: 2rem;
+}
+header .sidebarBtn .fa-bars {
+  font-size: 2rem;
+  cursor: pointer;
+  color: #fff;
+}
+/******************* nav > links-container *******************/
+.links {
+  list-style: none;
+  display: flex;
+  line-height: 40px;
+}
+.links li {
+  font-size: 1.2rem;
+  padding: 0 0.3rem;
+  margin-right: 1rem;
+  transition: all 0.3s ease;
+  border-radius: 0.3rem;
+}
+.links li a {
+  color: white;
+  text-decoration: none;
+}
+.links li:hover {
+  font-weight: 700;
+}
+.links .login {
+  display: flex;
+  flex-direction: row;
+}
+.links .userImg {
+  width: 40px;
+  height: 40px;
+  margin-right: 0.5rem;
+}
+.links .userImg img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+/****************** sidebar ***************/
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 400px;
+  height: 100%;
+  background-color: #f7f7f7;
+  z-index: 4;
+  display: grid;
+  /* grid-template-rows: auto 1fr 1fr auto auto; */
+  row-gap: 1rem;
+  transition: all 0.3s ease;
+  transform: translateX(-100%);
+  padding: 1rem 2rem;
+}
+.show-sidebar {
+  transform: translateX(0);
+}
+.subheading {
+  font-size: 1.2rem;
+  margin-bottom: 0.7rem;
+  color: #a0a0a0;
+}
+.sidebar-logo {
+  line-height: 100%;
+  color: #2699fb;
+}
+/****************** sidebar > header ***************/
+.sidebar-header {
+  height: 4rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+/*
+i.fa-solid에 position: absolute 을 줘서 
+아이콘이 버튼 구역에서 벗어난 것 같다.
+아이콘은 많이 사용될 테니 i.fa-solid에 되도록 공통 속성을 주지 말아야 겠다. 
+*/
+.sidebar-header .close-btn {
+  width: 2rem;
+  height: 2rem;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  color: #b4b4b4;
+}
+.sidebar-header .close-btn .fa-xmark {
+  font-size: 2rem;
+}
+/******************* sidebar > tags *******************/
+.tags {
+  border-bottom: 1px solid #b4b4b4;
+}
+.tag-box {
+  position: float;
+}
+.emoTag {
+  background: transparent;
+  padding: 0.3rem;
+  border-radius: 0.3rem;
+  margin-bottom: 0.7rem;
+  border: 1px #b4b4b4 solid;
+  cursor: pointer;
+  color: #707070;
+}
+.checked {
+  background-color: #2699fb;
+  color: white;
+  border: 1px solid #2699fb;
+}
+.emoTag:hover {
+  background-color: #2699fb;
+  color: white;
+}
+/********************** sidebar > randomBtn **************/
+.randomBtn {
+  display: flex;
+  align-items: center;
+}
+
+.randomBtn h2 {
+  color: #2699fb;
+}
+
+.randomBtn .randomCheckBtn {
+  background: transparent;
+  border: none;
+  margin-right: 1rem;
+  width: 2rem;
+  height: 2rem;
+  cursor: pointer;
+}
+.randomBtn .randomCheckBtn .fa-check,
+.randomBtn .randomCheckBtn .fa-circle-check {
+  font-size: 2rem;
+  width: 100%;
+  height: 100%;
+  color: #2699fb;
+}
+/********************** sidebar > bgm-container **************/
+.bgm .bgm-container {
+  border: 1px solid #e4e4e4;
+  border-radius: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0.5rem 0;
+  background-color: #fff;
+}
+.bgm .bgm-container .bgm-info-box {
+  text-align: center;
+}
+.bgm .bgm-container .bgm-info-box .song-title {
+  font-size: 1rem;
+  color: #707070;
+}
+.bgm .bgm-container .bgm-info-box .singer {
+  font-size: 0.7rem;
+  color: #707070;
+  opacity: 0.6;
+}
+.bgm .bgm-container .btnBoxes {
+  padding: 0.5rem 4rem;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.bgm .bgm-container .btnBoxes .bgmBtn {
+  background: transparent;
+  border: none;
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  color: #e4e4e4;
+}
+.bgm .bgm-container .btnBoxes .arrow {
+  background: transparent;
+  border: 2px solid #e4e4e4;
+}
+.bgm .bgm-container .bgm-pagination ul {
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+}
+.bgm .bgm-container .bgm-pagination ul li {
+}
+.bgm .bgm-container .bgm-pagination .dot {
+  width: 0.3rem;
+  height: 0.3rem;
+  padding: auto auto;
+  background-color: #e4e4e4;
+  border-radius: 50%;
+  margin: 0 3px;
+}
+.bgm .bgm-container .bgm-pagination .dot.active {
+  width: 0.4rem;
+  height: 0.4rem;
+  background-color: #2699fb;
+}
+/*********************** playlist ***********************/
+.playlist .playlist-header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.playlist .playlist-header .playlistBtn {
+  border: none;
+  background: transparent;
+  margin-left: 1rem;
+  width: 1.5rem;
+  height: 1.5rem;
+  margin-bottom: 0.7rem;
+  cursor: pointer;
+}
+.playlist .playlist-header .playlistBtn .fa-arrow-right-long {
+  width: 100%;
+  height: 100%;
+  font-size: 1.5rem;
+  color: #b4b4b4;
+}
+.playlist .playlist-container {
+  border: 1px solid #e4e4e4;
+  border-radius: 0.5rem;
+  background-color: #fff;
+}
+.playlist .playlist-container ul {
+  list-style: none;
+}
+.playlist .playlist-container .static {
+  display: flex;
+  background: #f7f7f7;
+  color: #b4b4b4;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+}
+.playlist .playlist-container .static .playlistAddBtn {
+  border: none;
+  background: transparent;
+  color: #b4b4b4;
+  margin-left: 0.5rem;
+  cursor: pointer;
+}
+.playlist .playlist-container .playlist-list {
+  overflow-y: auto;
+  height: 7rem;
+}
+.playlist .playlist-container .playlist-list li {
+  padding: 1rem;
+  border-bottom: #b4b4b4 solid 1px;
+  color: #b4b4b4;
+  cursor: pointer;
+}
+/* 스크롤바 설정*/
+.playlist-list::-webkit-scrollbar {
+  width: 6px;
+}
+
+/* 스크롤바 막대 설정*/
+.playlist-list::-webkit-scrollbar-thumb {
+  height: 17%;
+  background-color: rgba(255, 255, 255, 1);
+  /* 스크롤바 둥글게 설정    */
+  border-radius: 10px;
+}
+
+/* 스크롤바 뒷 배경 설정*/
+.playlist-list::-webkit-scrollbar-track {
+  background-color: rgba(0, 0, 0, 0);
+}
+
+/***************** 모달 > 새 플레이리스트 추가 ****************/
+.playlistAddModal {
+  visibility: hidden;
+  z-index: -10;
+  position: absolute;
+  background-color: #fff;
+  color: #707070;
+  width: 400px;
+  height: 150px;
+  border-radius: 10px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 1rem;
+}
+.show-modal {
+  visibility: visible;
+  z-index: 10;
+}
+.playlistAddModal .modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 0.5rem;
+  margin-bottom: 1rem;
+  font-weight: bold;
+  border-bottom: 2px solid #707070;
+}
+.playlistAddModal .modal-header .modal-closeBtn {
+  border: none;
+  background: transparent;
+  cursor: pointer;
+}
+.playlistAddModal .modal-header .modal-closeBtn i {
+  font-size: 2rem;
+}
+.playlistAddModal form input {
+  font-size: 1.3rem;
+  padding: 0.3rem;
+  width: 17rem;
+  margin-right: 1rem;
+}
+.playlistAddModal form button {
+  font-size: 1rem;
+  padding: 0.4rem 1rem;
+  background: #2699fb;
+  color: white;
+  border: 1px solid #2699fb;
+  border-radius: 0.5rem;
+}
+.playlistAddModal form button:hover {
+  color: #2699fb;
+  background: #707070;
+  border: 1px solid #707070;
+}
+/***************** 모달 > 서평 플레이리스트에 추가 ****************/
+.addReviewModal {
+  position: absolute;
+  background-color: #fff;
+  color: #707070;
+  width: 400px;
+  border-radius: 10px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 1rem;
+}
+.addReviewModal .input-box {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid black;
+}
+.addReviewModal .input-box input {
+  padding: 0.5rem;
+  /* background: #d4d4d4; */
+  border: 1px solid #707070;
+  border-radius: 0.5rem;
+  width: 20rem;
+}
+.addReviewModal .input-box .modal-closeBtn {
+  border: none;
+  background: transparent;
+  cursor: pointer;
+}
+.addReviewModal .input-box .modal-closeBtn i {
+  font-size: 2rem;
+}
+.addReviewModal .playlist-box {
+  overflow-y: auto;
+  height: 15rem;
+}
+.addReviewModal .playlist-box ul {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+}
+.addReviewModal .playlist-box ul .playlist-li {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #cfcfcf;
+  padding: 1rem 0.5rem;
+  font-weight: bold;
+}
+.addReviewModal .playlist-box ul .playlist-li button {
+  border: none;
+  background: transparent;
+}
+.addReviewModal .playlist-box ul .playlist-li button i {
+  font-size: 1.3rem;
+  cursor: pointer;
+}
+/* 스크롤바 설정*/
+.playlist-box::-webkit-scrollbar {
+  width: 6px;
+}
+
+/* 스크롤바 막대 설정*/
+.playlist-box::-webkit-scrollbar-thumb {
+  height: 17%;
+  background-color: #2699fb;
+  /* 스크롤바 둥글게 설정    */
+  border-radius: 10px;
+}
+
+/* 스크롤바 뒷 배경 설정*/
+.playlist-box::-webkit-scrollbar-track {
+  background-color: rgba(0, 0, 0, 0);
+}
