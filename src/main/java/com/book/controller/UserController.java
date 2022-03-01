@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @RequestMapping("/user")
 public class UserController {
 
+	//=================회원정보수정=======================================
 	@RequestMapping("/modify")
 	public String userModify() {
 		
@@ -14,4 +15,27 @@ public class UserController {
 		
 		return "user/userModify";
 	}
+	
+	//=================회원가입폼=======================================
+	@RequestMapping("/joinForm")
+	public String joinForm() {
+		
+		System.out.println("Controller.user.joinForm 접근");
+		
+		return "user/joinForm";
+		
+	}
+	
+	//=================로그인폼=======================================
+	@RequestMapping("/loginForm")
+	public String login() {
+		
+		System.out.println("Controller.user.loginForm 접근");
+		
+		return "user/loginForm";
+		
+	}
+	
+	
+	
 }

@@ -180,4 +180,10 @@ body {
 /* 박스 테두리 */
 .box-line {border-style: 1px solid #8f8c8c;}
 
+/* 테이블 양쪽 선 */
+.line-l-r {
+    border-left: 2px solid #9B9B9B;
+    border-right: 2px solid #9B9B9B;
+}
+
 
