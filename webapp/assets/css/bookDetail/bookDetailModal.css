@@ -1,0 +1,40 @@
+@charset "UTF-8";
+
+#kakao-link-btn>img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin-left:  80px;
+}
+
+.modal-body>p {
+    text-align: center;
+    font-size: 18px;
+    margin: 30px;
+}
+
+.modal-body {
+    margin: 40px 40px 40px 40px;
+}
+
+.modal-body>a {
+    margin-right: 25px;
+}
+
+#facebook-link-btn>img {
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+}
+
+#twitter-link-btn>img {
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+}
+
+#kakaostory-link-btn>img {
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+}

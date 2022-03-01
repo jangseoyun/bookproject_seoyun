@@ -1,0 +1,111 @@
+@charset "UTF-8";
+
+/* input 박스 디자인 */
+input {
+    border-style: none;
+    width: 100%;
+    height: 45px;
+    background-color: #f3f3f3;
+    border-radius: 12px;
+    margin: 10px 0px 30px 0px;
+    padding-left: 15px;
+}
+
+.input-box {
+    font-size: 16px;
+}
+
+.line {
+    border-bottom: 2px solid #eeeeee;
+}
+
+#user_modify_head {
+    padding: 20px 0px 0px 0px;
+    margin: 5px 0px 0px 5px;
+}
+
+#user_pro {
+    border-style: solid;
+    border-color: #E4E4E4;
+    border-width: 2px;
+    border-radius: 10px;
+    margin: 30px 0px 30px 0px;
+}
+
+#user_icon {
+    width: 120px;
+    height: 120px;
+    cursor: pointer;
+}
+
+/* 상단 그리드 영역 */
+#user_mdfy_h1 {
+    margin: 5px 0px 0px 5px;
+}
+
+#user_mdfy_h1>h1 {
+    margin: 0px 0px 15px 35px;
+}
+
+#user_md_txt>h2 {
+    margin-bottom: 15px;
+    font-size: 18px;
+}
+
+#user_modify-form{
+    margin: 0px 0px 20px 0px;
+    font-size: 12px;
+}
+
+/* 회원정보수정  */
+#user_modify_box {
+    padding: 25px;
+}
+
+#user_modify_content {
+    border-style: solid;
+    border-color: #E4E4E4;
+    border-width: 2px;
+    border-radius: 10px;
+    padding: 30px;
+}
+
+#modify_content_head {
+    border-bottom: 2px solid #E4E4E4;
+    margin-bottom: 30px;
+}
+
+#modify_content_head>h1 {
+    font-size: 18px;
+}
+
+#modify_nickname {
+    font-size: 16px;
+    color: #707070;
+    margin: 0px 0px 0px 5px;
+}
+
+#pw_check{
+    color: red;
+    margin-left: 8px;
+    font-size: 16px;
+}
+
+#id_check {
+    color: red;
+    margin-left: 8px;
+    font-size: 16px;
+}
+
+#modify_pw {
+    font-size: 16px;
+    color: #707070;
+    margin: 0px 0px 0px 5px;
+}
+
+#btn_modify {
+    margin: 30px 0px 150px 0px;
+    border-style: none;
+}
+
+

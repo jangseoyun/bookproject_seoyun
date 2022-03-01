@@ -1,0 +1,183 @@
+@charset "UTF-8";
+
+/* 책 제목 (큰 글씨)*/
+@font-face {
+    font-family: 'KOHIBaeumOTF';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/KOHIBaeumOTF.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* 책 설명 (고딕)*/
+@font-face {
+    font-family: 'MinSans-Medium';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/MinSans-Medium.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* -------사이트 전체 적용------- */
+body, div, ul, li, dl, dt, ol, h1, h2, h3, h4, h5, 
+h6, input, fieldset, legend, p, select, table, th, 
+td, tr, textarea, button, form {
+    margin: 0; padding: 0;
+}
+/* clearfix */
+.clearfix{*zoom:1;}
+.clearfix:before, .clearfix:after {display: block; content: ""; line-height: 0;}
+.clearfix:after {clear: both;}
+
+body {
+    font-family: 'MinSans-Medium';
+    font-size: 12px;
+}
+
+#wrap {
+    width: 1130px;
+    margin: 0px auto;
+}
+
+/* ---------------레이아웃-------------- */
+#header {
+    /* background-color: aqua; */
+    /* border: 2px solid #000000; */
+    padding: 30px 0px 30px 0px;
+    /* border-bottom: 2px solid #dddddd; */
+}
+
+#contents {
+    padding: 10px 0px 40px 0px;
+    margin-bottom: 40px;
+
+    border-bottom-style: solid;
+    border-bottom-width: 2px;
+    border-bottom-color: #e4e4e4;
+}
+
+#wrap {
+    width: 1130px;
+    margin: 0px auto;
+}
+
+/* ---------헤더---------- */
+#header {
+    background-color: #FFFFFF;
+    transition: opacity 1s;
+}
+
+#header>a>img {
+    float: left;
+    width: 110px;
+    margin: 0px 40px 0px 10px;
+    cursor:pointer;
+}
+
+#header>ul>span>.img-circle {
+    width: 30px;
+    height: 30px;
+    cursor:pointer;
+}
+
+#header>ul>span {
+    cursor:pointer;
+}
+
+#header ul {
+    float: right;
+}
+
+#header>ul>li {
+    float:left;
+    padding: 10px 0px 10px 20px;
+}
+
+/* --------------footer------------- */
+#footer {
+    margin: 50px 0px 60px 0px;
+    border-top : 2px solid #e4e4e4;
+    padding: 15px 0px 0px 0px;
+    color: #666666;
+}
+#footer>div{
+    float: left;
+}
+#footer>a {
+    float: right;
+    margin: 18px 10px 0px 0px;
+}
+
+/* ---------css 소스---------- */
+
+/* 버튼 및 색상 */
+.main-btn {
+    background-color: #2699fb;
+    color: white;
+}
+
+/* 곡선 */
+.r-20 {border-radius: 20px;}
+
+.blue-1 {background-color: #88c6fd;}
+.blue-2 {background-color: #2699fb;}
+.blue-3 {background-color: #006cca;}
+
+.gray-s {background-color: #ececec;}
+.gray-ss {background-color: #F7F7F7;}
+.gray-m {background-color: #B4B4B4;}
+.red {background-color: rgb(228, 90, 90);}
+.green {background-color: green;}
+.yellow {background-color: rgb(247, 247, 112);}
+
+/* 폰트 색상*/
+.title-font-color {color: #707070;}
+.content-font-color{color: #adaaaa;}
+.font-color-w {color: #ffffff;}
+.font-gray-plus {color: #B4B4B4;}
+
+.font_blue_1 {color: #BEDDF8;}
+.font_blue_2 {color: #2699fb;}
+.font_blue_3 {color: #006cca;}
+
+/* 폰트 사이즈 */
+.txt-mm {font-size: 25px;}
+.txt-m {font-size: 20px;}
+.txt-18{font-size: 18px;}
+.txt_ms {font-size: 16px;}
+.txt_ss {font-size: 12px;}
+.txt_b {font-size: 50px; }
+
+/* 폰트 기본 간격 */
+.margin-t5 {margin-top: 5px;}
+
+/* 폰트 굵기 */
+.txt-b {font-weight: bold;}
+
+/* 가운데 정렬 */
+.txt-center {text-align: center;}
+
+/* float */
+.float-l {float:left;}
+.float-r {float:right;}
+
+/* 기본 마진 */
+.margin-30 {margin: 30px}
+.margin-15 {margin: 15px}
+.margin-b-15 {margin-bottom: 15px;}
+.margin-r-15 {margin-right: 15px;}
+
+/* 패딩 */
+.padding-20 {padding: 20px;}
+
+/* 유저 사진 아이콘 */
+.img-icon {
+    width: 25px;
+    height: 25px;
+}
+
+/* 박스 테두리 제거 */
+.line-none {border-style: none;}
+
+/* 박스 테두리 */
+.box-line {border-style: 1px solid #8f8c8c;}
+
+

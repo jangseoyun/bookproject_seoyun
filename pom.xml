@@ -33,6 +33,13 @@
 			<artifactId>spring-webmvc</artifactId>
 			<version>${org.springframework-version}</version>
 		</dependency>
+		
+		<!-- spring jdbc -->
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-jdbc</artifactId>
+			<version>${org.springframework-version}</version>
+		</dependency>
 
 		<!-- Oracle JDBC -->
 		<dependency>
@@ -47,13 +54,6 @@
 			<version>11.2.0.4</version>
 		</dependency>
 		
-		<!-- spring jdbc -->
-		<dependency>
-			<groupId>org.springframework</groupId>
-			<artifactId>spring-jdbc</artifactId>
-			<version>${org.springframework-version}</version>
-		</dependency>
-
 		<!-- jstl -->
 		<dependency>
 			<groupId>javax.servlet</groupId>
