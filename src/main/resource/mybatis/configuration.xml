@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN" "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+	<typeAliases>
+	</typeAliases>
+	<mappers>
+		<!-- 필요하면 늘려가면서 사용할 수 있음 -->
+		<!-- <mapper resource="mybatis/mappers/login.xml" /> -->
+	</mappers>
+</configuration>

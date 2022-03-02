@@ -1,0 +1,685 @@
+@charset "UTF-8";
+
+/* 책 제목 */
+@font-face {
+    font-family: 'KOHIBaeumOTF';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/KOHIBaeumOTF.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* 서평 쓰기 */ 
+@font-face {
+    font-family: 'Nanum Myeongjo';
+    src: url('https://fonts.googleapis.com/css2?family=Nanum+Myeongjo&display=swap');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* -------사이트 전체 적용------- */
+body, div, ul, li, dl, dt, ol, h1, h2, h3, h4, h5, 
+h6, input, fieldset, legend, p, select, table, th, 
+td, tr, textarea, button, form {
+    margin: 0; padding: 0;
+}
+/* clearfix */
+.clearfix{*zoom:1;}
+.clearfix:before, .clearfix:after {display: block; content: ""; line-height: 0;}
+.clearfix:after {clear: both;}
+
+body {
+    font-family: 'MinSans-Medium';
+    font-size: 12px;
+}
+
+#wrap {
+    width: 1130px;
+    margin: 0px auto;
+}
+
+/* 파란색 #2699fb */
+
+
+/* ---------------레이아웃-------------- */
+#header {
+    /* background-color: aqua; */
+    /* border: 2px solid #000000; */
+    padding: 30px 0px 30px 0px;
+    /* border-bottom: 2px solid #dddddd; */
+}
+
+#container {
+    padding: 40px 0px 10px 0px;
+    margin-bottom: 30px;
+
+}
+
+/* ---------헤더---------- */
+#header {
+    background-color: #FFFFFF;
+    transition: opacity 1s;
+}
+
+#header>a>img {
+    float: left;
+    width: 110px;
+    margin: 0px 40px 0px 10px;
+    cursor:pointer;
+}
+
+#header>ul>span>.img-circle {
+    width: 30px;
+    height: 30px;
+    cursor:pointer;
+}
+
+#header>ul>span {
+    cursor:pointer;
+}
+
+#header ul {
+    float: right;
+}
+
+#header>ul>li {
+    float:left;
+    padding: 10px 0px 10px 20px;
+}
+/* ---------//헤더---------- */
+
+.progress-bar-contents span{
+    margin-left: 210px;
+    float: center;
+}
+
+/* 책 선택 모달창  */
+.modal-playlist .info-container .book-title {
+    width: fit-content;
+    padding: 0.1rem 0.2rem;
+    border: none;
+    background-color: #ffffff;
+    font-size: 1.9rem;
+    font-weight: bold;
+    color: #666666;
+    font-family: 'Nanum Myeongjo';
+    text-shadow: 3px 3px 5px #d1cfcf;
+    
+  }
+
+.modal-playlist .info-container .book-author {
+font-size: 1.3rem;
+color: #666666;
+font-family: 'Nanum Myeongjo';
+}
+
+.modal-playlist .info-container .review-count{
+font-weight: bold;
+color: rgb(75, 75, 75);
+font-family: 'Nanum Myeongjo';
+}
+
+.modal-playlist .book-img-container .img-thumbnail{
+    width: 92px;
+    height: 145px;
+    border-radius: 0.5rem;
+    background-image: none;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3);
+    margin-right: 1.5rem;
+    cursor: pointer;
+  }
+
+
+  /**/
+
+#ex_input{
+    
+    width:1000px;
+    height:60px;
+    padding:20px;
+    background-color:#F7F7F7;
+    border-radius: 12px;
+    border-color: #E4E4E4;
+    font-size: large;
+}
+
+#add-1{
+    display: inline-block;
+border-radius: 10px;
+margin: 20px;
+padding: 10px 16px;
+background-color:#F7F7F7;
+color: #666666;
+border-color: #B4B4B4;
+display:block;
+}
+
+/* 책 선택하기 */
+#contents #book_select h1 {
+	padding: 30px 0px 10px 0px;
+    margin: 50px 30px 10px 0px;
+	float:left;
+    font-family: 'MinSans-Medium';
+    font-size: 25px;
+    color: #666666;
+}
+
+.book_title {
+    font-family: 'MinSans-Medium';
+    font-size: 20px;
+    color: #adaaaa;
+    /* margin: 0px 0px 20px 0px; */
+}
+#book_img {
+    float: left;
+    width: 220px;
+    height: 300px;
+    margin-right: 50px;
+    box-shadow: 8px 8px 8px rgb(172, 172, 172);
+}
+
+#book_detail {
+    float:left;
+}
+
+/* 책 제목 */
+#book_detail>h1 {
+    font-family: 'MinSans-Medium';
+    font-size: 25px;
+    color: #666666;
+    margin: 10px 0px 20px 0px;
+}
+
+/* 책 저자 */
+#book_detail>h3 {
+    font-family: 'MinSans-Medium';
+    font-size: 20px;
+    color: #adaaaa;
+    margin: 0px 0px 20px 0px;
+}
+
+/* 서평수txt */
+#book_review {
+    margin: 20px 0px 20px 0px;
+}
+
+.review_count {
+    font-family: 'MinSans-Medium';
+    font-size: 20px;
+    color: #adaaaa;
+    margin-right: 10px;
+}
+
+.review_num {
+    font-family: 'MinSans-Medium';
+    font-size: 20px;
+    font-weight: bold;
+    color: #666666;
+    
+}
+
+#btn_delete {
+    float:right;
+    padding: auto;
+    margin: 0px 10px 0px 0px;
+    background-color: none;
+}
+#btn_modify {
+    float:right;
+    padding: auto;
+    margin: 0px 10px 0px 0px;
+    background-color: none;
+}
+
+/* 감정 태그 */
+#contents #mood_tag h1 {
+	padding: 30px 0px 10px 0px;
+    margin: 50px 30px 10px 0px;
+	float:left;
+    font-family: 'MinSans-Medium';
+    font-size: 25px;
+    color: #666666;
+}
+
+#btn_mood>button {
+	display:block;
+	float:left;
+    padding: 15px 40px 15px 40px;
+    margin: 5px;
+}
+
+
+/* 스타일 */
+#contents #style h1{
+	padding: 30px 0px 10px 0px;
+    margin: 20px 30px 10px 0px;
+	float:center; 
+    font-family: 'MinSans-Medium';
+    font-size: 25px;
+    color: #666666;	
+}
+
+#select-style{
+    margin: 20px;
+}
+
+/* 스타일 선택 버튼 */
+.btn_style{
+	width: 70px;
+	height: 70px;
+	border-radius:50%;
+	border: none;
+	font-size:25px;
+	text-align:center;
+	line-height:30px;
+	margin-right:20px; 
+	background: #addddd; /* 여기 이미지 버튼으로 바꾸기  */
+}
+
+/* 서평 적는 공간 */
+#review_box{
+    display: table;
+	padding: 30px;
+	height: 650px;
+    width: 1030px;
+    border-radius: 16px;
+    background: #2E8B57;
+    color:#ffffff;
+    margin: auto;
+   /* background-image: url(/static/imagefarm/101074948/7jq08lxPGuzxsz0f1zZAJIH4xmwITUMM) */
+}
+
+#review_box p{
+    display: table-cell;
+    vertical-align: middle;
+    text-align:center;
+    font-size: 20px;
+	font-family: 'Nanum Myeongjo';
+   
+}
+
+/* .input_review .p{
+    border-radius: 15px;
+    margin: 15px 0px 15px 0px;
+    padding: 35px 45px 35px 45px;
+    text-align: center;
+ 
+   
+} */
+
+
+
+
+/* 플레이리스트에 추가 */
+#contents #add_playlist h1 {
+	padding: 30px 0px 10px 0px;
+    margin: 50px 30px 10px 0px;
+    font-family: 'MinSans-Medium';
+    font-size: 25px;
+    color: #666666;
+}
+
+
+/* 플레이리스트 모달창 */
+.modal-container {
+    width: 100%;
+    background-color: none;
+    /****************/
+    padding: 2rem 2.5rem;
+    border-radius: 0.5rem;
+  }
+  .modalHeader {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 1.5rem;
+  }
+  .modalHeader .title {
+    font-weight: bold;
+
+  }
+  .modalHeader .closeBtn {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+  }
+  .modal-search {
+    padding-bottom: 1.3rem;
+    position: relative;
+  }
+  .modal-search input {
+    width: 100%;
+    padding: 0.7rem 1rem;
+    border-radius: 1.5rem;
+    border: 2px solid #666666;
+  }
+  
+  .modal-search:after {
+    content: "\f002";
+    z-index: 2;
+    color: #666666;
+    font-weight: 900;
+    font-family: "Font Awesome 5 Free";
+    position: absolute;
+    right: 1rem;
+    top: 0.8rem;
+    font-size: 1.2rem;
+    cursor: pointer;
+  }
+  
+  .modal-playlist ul {
+    list-style: none;
+    padding: 0 1rem;
+  }
+  .modal-playlist ul .list {
+    display: flex;
+    padding: 2rem 0;
+    border-bottom: 1px solid rgb(196, 195, 195);
+  }
+  .modal-playlist .img-container {
+    width: 100px;
+    height: 100px;
+    border-radius: 0.5rem;
+    background-color: pink;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3);
+    margin-right: 1.5rem;
+    cursor: pointer;
+  }
+  .modal-playlist .info-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    cursor: pointer;
+    padding: 10px;
+
+  }
+  .modal-playlist .info-container .tagBtn {
+    background-color: rgb(218, 243, 250);
+    border: 1px solid rgb(218, 243, 250);
+    color: rgb(0, 132, 255);
+    border-radius: 0.5rem;
+    width: fit-content;
+    padding: 0.1rem 0.2rem;
+    font-size: 0.8rem;
+  }
+  .modal-playlist .info-container .playlist-title {
+    font-size: 1.6rem;
+    font-weight: bold;
+    color: #666666;
+  }
+  .modal-playlist .info-container .username {
+    font-weight: bold;
+    color: rgb(75, 75, 75);
+    font-family: 'Nanum Myeongjo';
+  }
+  .paging {
+    display: flex;
+    justify-content: center;
+  }
+  
+
+
+/* 이미지 저장 */
+#contents #download_img h1 {
+	padding: 30px 0px 10px 0px;
+    margin: 50px 30px 10px 0px;
+    font-family: 'MinSans-Medium';
+    font-size: 25px;
+    color: #666666;
+}
+
+/* 동그라미 버튼 */
+.btn_circle{
+	width: 70px;
+	height: 70px;
+	border-radius:50%;
+	border: none;
+	background: #adaaaa;
+	font-size:25px;
+	text-align:center;
+	line-height:30px;
+}
+
+/* 모달창 안에 돋보기 버튼 */
+.search_btn{
+	float:right;
+	height: 50px;
+	width:50px;
+} 
+
+/* 플레이리스트에 추가*/
+.modal-title{
+	float:left;
+}
+
+.cancle_btn{
+	float:right;
+}
+
+
+
+#btn_write {
+    float:right;
+    padding: 10px 60px 10px 60px;
+    background-color: #2699fb;
+}
+
+
+/* ------------컨텐츠 (책서평)---------------- */
+#contents_review>ul>li {
+    float:left;
+    margin: 0px 30px 0px 0px;
+}
+
+.review_list {
+    margin: 0px 0px 0px 40px;
+    font-size: 15px;
+}
+
+.jumbotron {
+    border-radius: 15px;
+    margin: 15px 0px 15px 0px;
+    padding: 35px 45px 35px 45px;
+}
+
+
+#select_box{
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+}
+
+
+
+#btn_admit{
+	height: 50px;
+	width:1110px;
+    margin-top: 100px;
+	display:block;
+}
+
+#btn_cancle{
+	height: 50px;
+	width:1110px;
+	margin-top: 5px;
+}
+
+
+
+
+
+
+.jumbotron>div>.button {
+    font-size: 125px;
+    font-weight: bold;
+    color: #666666;
+    text-align: center;
+    line-height: 100px;
+
+   	margin-bottom: 40px;
+}
+
+
+
+.jumbotron>div>p {
+    color: #adaaaa;
+    text-align: center;
+    line-height: 100px;
+}
+
+
+.review_like {
+    margin: 5px;
+}
+
+#footer-btn btn{
+    margin-top: 10px;
+}
+
+
+/* --------------footer------------- */
+#footer {
+    margin: 50px 0px 60px 0px;
+    border-top : 2px solid #e4e4e4;
+    padding: 15px 0px 0px 0px;
+    color: #666666;
+}
+#footer>div{
+    float: left;
+}
+#footer>a {
+    float: right;
+    margin: 18px 10px 0px 0px;
+}
+
+
+
+
+
+/* ------------컨텐츠 (책서평)---------------- */
+#contents_review>ul>li {
+    float:left;
+    margin: 0px 30px 0px 0px;
+}
+
+.review_list {
+    margin: 0px 0px 0px 40px;
+    font-size: 15px;
+}
+
+.jumbotron {
+    border-radius: 15px;
+    margin: 25px 0px 0px 0px;
+    padding: 25px 60px 25px 60px;
+    background-color: #F7F7F7;
+}
+
+.jumbotron>div>h3 {
+    font-size: 20px;
+    font-weight: bold;
+    color: #666666;
+
+    margin-bottom: 25px;
+    display: inline;
+}
+
+.jumbotron>div>p {
+    color: #adaaaa;
+    margin-top: 10px;
+    font-size: 16px;
+}
+
+.review_modify {
+    float: right;
+    font-size: 16px;
+    margin-right: 10px;
+    text-decoration: none;    
+}
+
+#review_first span a {
+    color: #707070;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+#review_first>span {
+    /* background-color: #2699fb; */
+    color: rgb(189, 189, 189);
+    padding: 3px 3px 0px 0px;
+}
+
+.review_nick {
+    display: block;
+    font-size: 20px;
+    color: #B4B4B4;
+
+    margin-top: 10px;
+}
+
+#tag_btn {
+    background-color: #2699FB;
+    border-radius: 4px;
+    color: #FFFFFF;
+    padding: 5px 10px 5px 10px;
+    margin-bottom: 10px;
+}
+
+.review_like {
+    margin: 5px;
+    color: #ABAAAC;
+    font-size: 15px;
+}
+
+.pagination {
+    margin: 35px 430px 40px 430px;
+}
+
+.icon-success {
+    font-size: 13px;
+}
+
+#btn_like {
+    cursor: pointer;
+    color: #2699FB;
+    font-size: 15px;
+}
+
+
+/* 말줄임 */
+.multiline-ellipsis {
+    white-space: normal;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+    word-wrap : break-word; 
+    text-align : left; 
+    line-height: 1.2;
+
+    -webkit-line-clamp: 3;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+
+    /* 폰트 */
+    color: #707070;
+    margin-top: 15px;
+    font-size: 16px;
+    margin-bottom: 15px;
+
+    width: 660px;
+    height: 60px;
+}
+
+.review_add {
+    font-size: 20px;
+    margin: 50px;
+    text-align: center;
+}
+
+.review_add>a {
+    color: #707070;
+    cursor: pointer;
+}
+
+
+#btn_add {
+    border-radius: 10px;
+    border-style: none;
+}
