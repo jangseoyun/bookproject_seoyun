@@ -14,7 +14,7 @@ public class BookstorageController {
 		
 		System.out.println("Controller.bookStorage.detail 실행");
 		
-		return "bookStorage/bookDetail";
+		return "bookStorage/book-detail";
 	}
 	
 	//=================내서재 -> 내서평=======================================
@@ -23,7 +23,7 @@ public class BookstorageController {
 		
 		System.out.println("Controller.bookStorage.review 실행");
 		
-		return "bookStorage/bookReview";
+		return "bookStorage/book-review";
 	}
 	
 	

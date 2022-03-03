@@ -14,7 +14,7 @@
         <script src="${pageContext.request.contextPath}/assets/bootstrap/js/bootstrap.js"></script>
         
         <link rel="stylesheet" href="${pageContext.request.contextPath}/assets/css/source/source.css">
-        <link rel="stylesheet" href="${pageContext.request.contextPath}/assets/css/bookStorage/bookReview.css">
+        <link rel="stylesheet" href="${pageContext.request.contextPath}/assets/css/bookStorage/book-review.css">
         <link rel="stylesheet" href="${pageContext.request.contextPath}/assets/css/source/more-share-review.css">
     </head>
 

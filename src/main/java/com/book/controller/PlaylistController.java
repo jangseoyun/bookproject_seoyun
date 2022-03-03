@@ -7,22 +7,48 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @RequestMapping("/playlist")
 public class PlaylistController {
 	
-	//=================메인=======================================
-	@RequestMapping("")
-	public String playlistMain() {
+	//================= 플레이리스트 -> 메인 =======================================
+	
+	
+	
+	//================= 플레이리스트 -> 더보기 =======================================
+	@RequestMapping("/more")
+	public String playlistMore() {
 		
-		System.out.println("Controller.playlist.edit 접근");
+		System.out.println("Controller.playlist.more 접근");
 		
-		return "playlist/playlistMain";
+		return "playlist/playlist-more";
 	}
 	
-	//=================수정=======================================
-	@RequestMapping("/edit")
+	//================= 플레이리스트 폴더 추가 =======================================
+	@RequestMapping("/add")
 	public String playlistEdit() {
 		
-		System.out.println("Controller.playlist.edit 접근");
+		System.out.println("Controller.playlist.add 접근");
 		
-		return "playlist/playlistEdit";
+		return "playlist/playlist-add";
 	}
+	
+	//================= 플레이리스트 해당 폴더 =======================================
+	@RequestMapping("/folder")
+	public String playlistfolder() {
+		
+		System.out.println("Controller.playlist.folder 접근");
+		
+		return "playlist/playlist-in-folder";
+	}
+	
+	//================= 플레이리스트 메인 =======================================
+	@RequestMapping("/main")
+	public String playlistMain() {
+		
+		System.out.println("Controller.playlist.main 접근");
+		
+		return "playlist/playlist-main";
+	}
+	
+	
+	
+
 
 }

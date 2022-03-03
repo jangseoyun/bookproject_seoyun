@@ -1,15 +1,15 @@
 <%@ page language="java" contentType="text/html; charset=EUC-KR" pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 
 <!DOCTYPE html>
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
-    
     <!-- 메타태그 -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>플레이북</title>
+    <title>보글 boggle</title>
     <script src="${pageContext.request.contextPath}/assets/js/app3.js" defer></script>
-    <link rel="stylesheet" href="${pageContext.request.contextPath}/assets/css/main/style3.css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/assets/css/main/main.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
 </head>
 <body>
@@ -18,16 +18,16 @@
         <!-- nav -->
         <nav>
             <div class="nav-header">
-                <h1 class="logo">SYB</h1>
+                <h1 class="logo">BOGGLE</h1>
             </div>
             <div class="links-container">
                 <ul class="links">
                     <li><a href="">기록하기</a></li>
                     <li class="login">
                         <div class="userImg">
-                            <img src="/bookproject/asset/img/profile.png" alt="">
+                            <img src="${pageContext.request.contextPath}/assets/images/user/profile.png" alt="">
                         </div>
-                        <a href="${pageContext.request.contextPath}/user/loginForm">로그인</a>
+                        <a href="">로그인</a>
                     </li>
                 </ul>
             </div>

@@ -1,4 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 
 <!DOCTYPE html>
 <html lang="ko">
@@ -6,14 +7,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>플레이리스트 수정</title>
+    <title>플레이리스트 폴더 생성</title>
     
     <script type="text/javascript" src="${pageContext.request.contextPath}/assets/js/jquery-1.12.4.js"></script>
     <link rel="stylesheet" href="${pageContext.request.contextPath}/assets/bootstrap/css/bootstrap.css">
     <script type="text/javascript" src="${pageContext.request.contextPath}/assets/bootstrap/js/bootstrap.js"></script>
 
-    <link rel="stylesheet" href="${pageContext.request.contextPath}/assets/css/main/style3.css" type="text/css">
-    <link rel="stylesheet" href="${pageContext.request.contextPath}/assets/css/playlist/playlistEdit.css" type="text/css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/assets/css/playlist/style.css" type="text/css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/assets/css/playlist/playlist-add.css" type="text/css">
+
+	<!-- font awesome icon 파일 -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
 </head>
 
 <body>
@@ -295,10 +299,6 @@
             </div>
             <a href="">FAQ</a><a href="">서비스소개</a>
         </div>
-
-
-
-
 
     </div>
 

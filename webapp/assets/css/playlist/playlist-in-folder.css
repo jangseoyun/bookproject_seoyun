@@ -1,0 +1,254 @@
+@charset "UTF-8";
+
+/* 책 제목 */
+@font-face {
+    font-family: 'KOHIBaeumOTF';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/KOHIBaeumOTF.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* 책 설명 */
+@font-face {
+    font-family: 'MinSans-Medium';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/MinSans-Medium.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* -------사이트 전체 적용------- */
+body, div, ul, li, dl, dt, ol, h1, h2, h3, h4, h5, 
+h6, input, fieldset, legend, p, select, table, th, 
+td, tr, textarea, button, form {
+    margin: 0; padding: 0;
+}
+/* clearfix */
+.clearfix{*zoom:1;}
+.clearfix:before, .clearfix:after {display: block; content: ""; line-height: 0;}
+.clearfix:after {clear: both;}
+
+body {
+    font-family: 'MinSans-Medium';
+    font-size: 12px;
+}
+
+#wrap {
+    width: 1130px;
+    margin: 0px auto;
+}
+
+/* 파란색 #2699fb */
+
+
+/* ---------------레이아웃-------------- */
+#header {
+    /* background-color: aqua; */
+    /* border: 2px solid #000000; */
+    padding: 30px 0px 30px 0px;
+    /* border-bottom: 2px solid #dddddd; */
+}
+
+#contents {
+    padding: 10px 0px 40px 0px;
+    margin-bottom: 40px;
+
+    border-bottom-style: solid;
+    border-bottom-width: 2px;
+    border-bottom-color: #e4e4e4;
+}
+
+/* ---------헤더---------- */
+#header {
+    background-color: #FFFFFF;
+    transition: opacity 1s;
+}
+
+#header>a>img {
+    float: left;
+    width: 110px;
+    margin: 0px 40px 0px 10px;
+    cursor:pointer;
+}
+
+#header>ul>span>.img-circle {
+    width: 30px;
+    height: 30px;
+    cursor:pointer;
+}
+
+#header>ul>span {
+    cursor:pointer;
+}
+
+#header ul {
+    float: right;
+}
+
+#header>ul>li {
+    float:left;
+    padding: 10px 0px 10px 20px;
+}
+
+/* ------------nav---------------- */
+#nav {
+    padding: 5px 0px 5px 0px;
+}
+
+/****************nav2*****************/
+#nav2>li{
+    width: 115px;
+    text-align: center;
+    font-size: 15px;
+    
+}
+#nav2>li.active>a{
+    background-color: none;
+    color: #2699FB;
+    font-weight: bold;
+}
+
+/* ------------컨텐츠 (책 소개)---------------- */
+
+.jumbotron {
+    border-radius: 15px;
+    margin: 16px;
+    padding: 32px;
+    color:#FDC3EA;
+    background-color: #34293C;
+    overflow:auto;
+}
+
+#buttonjumbo{
+    font-size: 14px;
+}
+.sub{
+    font-size:16px !important;
+    color: #ffffffb2;
+}
+
+.main-button{
+    color:aquamarine !important;
+}
+
+.btn, .btn-primary, .btn-lg {
+    margin-right:20px;
+    color: #fff;
+    background-color: #ffffff48;
+    border-color: #ffffff00;
+    float:left;
+}
+
+.nav, .nav-pills{
+    margin-left: 20px;
+    font-size:16px;
+
+}
+
+.review{
+    margin: 20px;
+    padding: 40px;
+    margin-bottom: 30px;
+    background-color: #F7F7F7;
+    color: #707070;
+    font-size:16px;
+}
+
+.tag{
+    background-color: #337ab7;
+    color:#fff;
+    border-radius: 4px;
+    padding:8px;
+    font-size:12px;
+}
+/* --------------연습 */
+
+/*************서평****************/
+
+#reviews{
+    width: 1050px;
+    margin : 15px 10px;
+    background-color: #e7e7e7;
+    padding : 15px 30px;
+    border-radius: 15px;
+}
+#reviews-header{
+    /*********리뷰박스크기따라조정할것*********/
+    width: 990px;
+    height : 25px;
+    margin-bottom : 3px;
+}
+#reviews-header>div>p{
+    font-size: 17px;
+    font-weight: bold;
+    color: #707070;
+}
+#reviews-header .right{
+    padding:5px 3px 0px 0px;
+}
+#reviews-header>div>a{
+    margin-left: 5px;
+    color: #888888;
+    font-size: 12px;
+}
+#reviewer{
+    margin: 0px 0px 5px 0px;
+}
+#reviewer>a{
+    font-size: 12px;
+    color: #707070;
+}
+#reviews-content{
+    color: #909090;
+    border-bottom: 1px solid #B4B4B4; 
+    padding: 0px 0px 10px 0px;
+    margin: 0px 0px 10px 0px;
+}
+#reviews-content>p{
+    margin-bottom: 5px;
+}
+#reviews-content>span{
+    margin-top: 3px;
+    background-color: #309BF8; 
+}
+#reviews-footer{
+    /*********리뷰박스크기따라조정할것*********/
+    width: 990px;
+    height : 15px;
+    color: #ABAAAC;
+    margin-top : 10px;
+}
+#reviews-footer span{
+    margin-right : 5px;
+}
+#reviews-footer #heart{
+    color: #309BF8;
+    padding: 2px 0px 0px 5px;
+}
+#reviews-footer .dropup a{
+    color: #707070;
+}
+#reviews-footer .dropup li a{
+    color:#B4B4B4 !important;
+    padding: 3px 10px !important;
+    width: 180px;
+}
+#reviews-footer .dropup li a span{
+    float:right;
+    padding-right: 10px;
+}
+#reviews-footer #plus{
+    font-size: 20px;
+}
+
+.left{
+    float: left;
+}
+.right{
+    float: right;
+}
+
+.edit{
+    float:right;
+    font-size: 16px;
+    color:#F7F7F7;
+}

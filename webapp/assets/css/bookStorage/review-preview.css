@@ -1,0 +1,90 @@
+@charset "UTF-8";
+
+/* -------사이트 전체 적용------- */
+body, div, ul, li, dl, dt, ol, h1, h2, h3, h4, h5, 
+h6, input, fieldset, legend, p, select, table, th, 
+td, tr, textarea, button, form {
+    margin: 0; padding: 0;
+}
+/* clearfix */
+.clearfix{*zoom:1;}
+.clearfix:before, .clearfix:after {display: block; content: ""; line-height: 0;}
+.clearfix:after {clear: both;}
+
+#wrap {
+    width: 1130px;
+    margin: 0px auto;
+}
+
+/* 책 제목 (큰 글씨)*/
+@font-face {
+    font-family: 'KOHIBaeumOTF';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/KOHIBaeumOTF.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* 책 설명 (고딕)*/
+@font-face {
+    font-family: 'MinSans-Medium';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/MinSans-Medium.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Myeongjo&display=swap');
+
+body {
+    font-family: 'MinSans-Medium';
+    font-size: 12px;
+}
+.container{
+    width:1130px !important;
+}
+a:hover{
+    cursor: pointer;
+}
+
+
+/* -------------imagebox-------------- */
+/****************헤더*****************/
+#header {
+    font-size: 20px;
+    font-family: 'KOHIBaeumOTF';
+    text-align: center;
+}
+
+
+/**************프리뷰박스*************/
+#content{
+    text-align: center;
+    vertical-align: middle;
+    margin: 0px auto;
+}
+#content #review-preview{
+    display: table;
+    background-color: #7656FD;
+    border-radius: 20px;
+    width: 1000px;
+    height: 500px;
+    margin: 20px auto;
+    color:#ffffff;
+    font-size: 17px;
+}
+#content #review-preview p{
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+    font-family: 'Nanum Myeongjo', serif;
+    font-weight: bold;
+}
+
+#content button{
+    margin: 20px 0px;
+    width: 1000px;
+    height: 50px;
+    background-color: #2699FB;
+    border: none;
+    border-radius: 7px;
+    font-size: 15px;
+    color: #FFFFFF;
+}

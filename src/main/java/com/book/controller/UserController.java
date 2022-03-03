@@ -36,6 +36,16 @@ public class UserController {
 		
 	}
 	
+	//=================로그인폼=======================================
+	@RequestMapping("/analyze")
+	public String userAnalyze() {
+		
+		System.out.println("Controller.user.analyze 접근");
+		
+		return "user/userAnalyze";
+		
+	}
+	
 	
 	
 	

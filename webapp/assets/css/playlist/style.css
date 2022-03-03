@@ -1,0 +1,145 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  /* body {
+    background-color: black;
+  } */
+  #modal-container {
+    width: 1000px;
+    border-radius: 20px;
+    background-color: #fff;
+    padding: 1.5rem;
+  }
+  .modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+  }
+  .modal-header a {
+    text-decoration: none;
+    color: #707070;
+    font-weight: bold;
+  }
+  .modal-header input {
+    font-size: 1.3rem;
+    width: 25rem;
+    padding: 0.3rem;
+    border-radius: 0.3rem;
+    border: none;
+    background-color: #f7f7f7;
+    position: relative;
+  }
+  .modal-header .input-box .fa-magnifying-glass {
+    position: absolute;
+    right: 3.5rem;
+    top: 2rem;
+    font-size: 1.2rem;
+    cursor: pointer;
+  }
+  
+  .modal-header a .fa-arrow-left {
+    margin-right: 0.3rem;
+  }
+  .modal-options {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1rem;
+  }
+  .modal-options .optionBtn {
+    border: none;
+    background: transparent;
+    padding: 0 5rem;
+    font-weight: bold;
+    cursor: pointer;
+    color: #707070;
+    font-size: 1.2rem;
+  }
+  .modal-options .optionBtn.option-selected {
+    color: #2699fb;
+  }
+  .modal-options .optionBtn:nth-child(1) {
+    border-right: 1px solid #707070;
+  }
+  /* .modal-list {
+  } */
+  .modal-list ul {
+    list-style: none;
+  }
+  .modal-list ul .review-card {
+    width: 100%;
+    height: 190px;
+    background: #f7f7f7;
+    border-radius: 16px;
+    padding: 0 1.5rem;
+    margin-bottom: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+  }
+  .review-selected {
+    border: 2px solid #2699fb;
+  }
+  .modal-list ul .review-card .bookname {
+    font-weight: bold;
+    margin-bottom: 0.7rem;
+    color: #707070;
+  }
+  .modal-list ul .review-card .checkBtn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+  }
+  .modal-list ul .review-card .checkBtn .fa-circle-check {
+    font-size: 2rem;
+    color: #abaaac;
+  }
+  /*hover*/
+  .modal-list ul .review-card .checkBtn:hover .fa-circle-check {
+    color: #2699fb;
+  }
+  .modal-list ul .review-card .checkBtn .fa-circle-check.checkBtn-selected {
+    color: #2699fb;
+  }
+  .modal-list ul .review-card .review-content {
+    margin-bottom: 1rem;
+  }
+  .modal-list ul .review-card .tag {
+    width: fit-content;
+    border-radius: 4px;
+    background-color: #2699fb;
+    font-size: 0.8rem;
+    color: white;
+    padding: 0.3rem 0.5rem;
+  }
+  .paging .pagination {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    margin-bottom: 1rem;
+  }
+  .paging .pagination .page-item {
+    padding: 0 0.5rem;
+  }
+  .paging .pagination .page-item .page-link {
+    text-decoration: none;
+    color: #707070;
+    font-size: 1.2rem;
+  }
+  .addReviewBtn {
+    width: 100%;
+    font-size: 1.3rem;
+    border: none;
+    background: #2699fb;
+    color: white;
+    border-radius: 0.5rem;
+    padding: 0.7rem 0;
+    cursor: pointer;
+  }
+  

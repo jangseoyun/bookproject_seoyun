@@ -215,7 +215,7 @@
                             <!-- 더보기 클릭시 모달창 오픈 -->
                             <!-- <button type="button" class="btn btn-default btn-sm">+더보기</button> -->
                             
-                            <div class="dropup">
+                            <div class="dropup float-r">
                                 <a id="dLabel" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                     + 더보기
                                     <!-- <span class="caret"></span> -->

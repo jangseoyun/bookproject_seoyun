@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 	
-	<div class="dropup">
+	<div class="dropup float-r">
 		<a id="dLabel" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> 
 			+ 더보기 
 			<!-- <span class="caret">삼각형 아이콘</span> -->

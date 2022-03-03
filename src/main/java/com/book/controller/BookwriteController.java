@@ -13,7 +13,7 @@ public class BookwriteController {
 		
 		System.out.println("Controller.bookWrite.write 실행");
 		
-		return "bookWrite/bookWrite";
+		return "bookWrite/book-write";
 	}
 	
 	

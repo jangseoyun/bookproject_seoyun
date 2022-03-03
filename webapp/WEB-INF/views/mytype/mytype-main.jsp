@@ -14,7 +14,8 @@
 
 	<link rel="stylesheet" href="${pageContext.request.contextPath}/assets/bootstrap/css/bootstrap.css">
     <link rel="stylesheet" href="${pageContext.request.contextPath}/assets/css/source/source.css" type="text/css">
-    <link rel="stylesheet" href="${pageContext.request.contextPath}/assets/css/bookStorage/mytypeMain.css" type="text/css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/assets/css/mytype/mytype-main.css" type="text/css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/assets/css/source/more-share-review.css" type="text/css">
 </head>
 <!--header-->
 
@@ -71,18 +72,9 @@
 							<span id="heart" class="glyphicon glyphicon-heart" aria-hidden="true"></span> <span>16.5k</span> <span>2022/02/22</span>
 						</div>
 						<div class="right">
-							<div class="dropup">
-								<a id="dLabel" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> 더보기 <span class="caret"></span>
-								</a>
-								<ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu2">
-									<li role="presentation"><a role="menuitem" tabindex="-1" href="#">플레이리스트에 추가<span id="plus">+</span></a></li>
-									<li role="presentation" class="divider"></li>
-									<li role="presentation"><a id="shr_review" role="menuitem" tabindex="-1">서평 공유하기<span class="glyphicon glyphicon-share" aria-hidden="true"></span></a></li>
-									<li role="presentation" class="divider"></li>
-									<li role="presentation">
-									<li role="presentation"><a id="save_img" role="menuitem" target="_blank" tabindex="-1" href="/bookproject/imgpreview">이미지 저장하기<span class="glyphicon glyphicon-save" aria-hidden="true"></span></a></li>
-								</ul>
-							</div>
+							<!-- +더보기 모달 리스트 -->
+	                        <c:import url="/WEB-INF/views/includes/modal/more-list.jsp"></c:import>
+	                        <!-- +더보기 모달 리스트 -->
 						</div>
 					</div>
 				</div>
@@ -103,7 +95,7 @@
 				</div>
 				<div>
 					<div class="likewriter">
-						<img src="/bookproject/asset/img/yjprofile.jpg" alt="..." class="img-circle">
+						<img src="${pageContext.request.contextPath}/assets/images/mytype/yjprofile.jpg" alt="..." class="img-circle">
 						<div id="writerinfo">
 							<h1>우동먹는 오리</h1>
 							<p>서평 수 : 913</p>
@@ -111,7 +103,7 @@
 						<p class="word">새는 알에서 빠져나오려고 몸부림친다. 알은 세계이다. 태어나려는 자는 누구든 한 개의 세계를 부숴야 한다. 새는 알에서 빠져나오려고 몸부림친다. 알은 세계이다. 태어나려는 자는 누구든 한 개의 세계를 부숴야 한다. 새는 알에서 빠져나오려고 몸부림친다. 알은 세계이다. 태어나려는 자는 누구든 한 개의 세계를 부숴야 한다. 새는 알에서 빠져나오려고 몸부림친다. 알은 세계이다. 태어나려는 자는 누구든 한 개의 세계를 부숴야 한다.</p>
 					</div>
 					<div class="likewriter">
-						<img src="/bookproject/asset/img/yjprofile.jpg" alt="..." class="img-circle">
+						<img src="${pageContext.request.contextPath}/assets/images/mytype/yjprofile.jpg" alt="..." class="img-circle">
 						<div id="writerinfo">
 							<h1>우동먹는 오리</h1>
 							<p>서평 수 : 913</p>
@@ -119,7 +111,7 @@
 						<p class="word">새는 알에서 빠져나오려고 몸부림친다. 알은 세계이다. 태어나려는 자는 누구든 한 개의 세계를 부숴야 한다. 새는 알에서 빠져나오려고 몸부림친다. 알은 세계이다. 태어나려는 자는 누구든 한 개의 세계를 부숴야 한다. 새는 알에서 빠져나오려고 몸부림친다. 알은 세계이다. 태어나려는 자는 누구든 한 개의 세계를 부숴야 한다. 새는 알에서 빠져나오려고 몸부림친다. 알은 세계이다. 태어나려는 자는 누구든 한 개의 세계를 부숴야 한다.</p>
 					</div>
 					<div class="likewriter">
-						<img src="/bookproject/asset/img/yjprofile.jpg" alt="..." class="img-circle">
+						<img src="${pageContext.request.contextPath}/assets/images/mytype/yjprofile.jpg" alt="..." class="img-circle">
 						<div id="writerinfo">
 							<h1>우동먹는 오리</h1>
 							<p>서평 수 : 913</p>
@@ -127,7 +119,7 @@
 						<p class="word">새는 알에서 빠져나오려고 몸부림친다. 알은 세계이다. 태어나려는 자는 누구든 한 개의 세계를 부숴야 한다. 새는 알에서 빠져나오려고 몸부림친다. 알은 세계이다. 태어나려는 자는 누구든 한 개의 세계를 부숴야 한다. 새는 알에서 빠져나오려고 몸부림친다. 알은 세계이다. 태어나려는 자는 누구든 한 개의 세계를 부숴야 한다. 새는 알에서 빠져나오려고 몸부림친다. 알은 세계이다. 태어나려는 자는 누구든 한 개의 세계를 부숴야 한다.</p>
 					</div>
 					<div class="likewriter">
-						<img src="/bookproject/asset/img/yjprofile.jpg" alt="..." class="img-circle">
+						<img src="${pageContext.request.contextPath}/assets/images/mytype/yjprofile.jpg" alt="..." class="img-circle">
 						<div id="writerinfo">
 							<h1>우동먹는 오리</h1>
 							<p>서평 수 : 913</p>
@@ -231,6 +223,10 @@
 			<!--content4-->
 
 		</div>
+		
+		<!-- 더보기 more-share-reivew 모달창 -->
+       	<c:import url="/WEB-INF/views/includes/modal/more-share-review.jsp"></c:import>
+        <!-- 더보기 more-share-reivew 모달창 -->
 
 		<!-- footer -->
 		<c:import url="/WEB-INF/views/includes/footer.jsp"></c:import>
@@ -239,6 +235,6 @@
 	<!--wrap-->
 </body>
 
-<script src="/bookproject/asset/js/more.js"></script>
+<script type="text/javascript" src="${pageContext.request.contextPath}/assets/js/more.js"></script>
 
 </html>

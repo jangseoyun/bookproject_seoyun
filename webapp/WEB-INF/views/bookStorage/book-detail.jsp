@@ -16,7 +16,7 @@
         <script type="text/javascript" src="${pageContext.request.contextPath}/assets/bootstrap/js/bootstrap.js"></script>
 		
         <link rel="stylesheet" href="${pageContext.request.contextPath}/assets/css/source/source.css" type="text/css">
-        <link rel="stylesheet" href="${pageContext.request.contextPath}/assets/css/bookStorage/bookDetail.css" type="text/css">
+        <link rel="stylesheet" href="${pageContext.request.contextPath}/assets/css/bookStorage/book-detail.css" type="text/css">
         <link rel="stylesheet" href="${pageContext.request.contextPath}/assets/css/source/more-share-review.css" type="text/css">
 
         <!-- kakao sdk 호출 -->

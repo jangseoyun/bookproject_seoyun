@@ -1,63 +1,58 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
-
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>   
+ 
 <!DOCTYPE html>
 
 <html lang="ko">
 
 <head>
     <meta charset="UTF-8">
-    <title>플레이리스트 메인</title>
+    <title>취향저격>플레이리스트>더보기</title>
+    
     <script type="text/javascript" src="${pageContext.request.contextPath}/assets/js/jquery-1.12.4.js"></script>
     <link rel="stylesheet" href="${pageContext.request.contextPath}/assets/bootstrap/css/bootstrap.css">
     <script type="text/javascript" src="${pageContext.request.contextPath}/assets/bootstrap/js/bootstrap.js"></script>
     
-    <link rel="stylesheet" href="${pageContext.request.contextPath}/assets/css/playlist/playlistMain.css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/assets/css/playlist/playlist-more.css">
+	<link rel="stylesheet" href="${pageContext.request.contextPath}/assets/css/source/source.css">
 </head>
-
+<!--header-->
 
 <body>
     <div id="wrap">
-        <div id="header" class="clearfix">
-            <a href=""> 
-            	<img src="${pageContext.request.contextPath}/assets/images/logo/1_logo.png">
-            </a>
-            <!--before login-->
-            <ul class="list-unstyled">
-                <a class="btn btn-link" role="button" href="#">기록하기</a>
-                <a class="btn btn-link" role="button" href="#">로그인</a>
-            </ul>
-            <!--after login-->
-            <!-- <ul class="list-unstyled">
-            <a class="btn btn-link" role="button" href="#">기록하기</a>
-            <span onclick="location.href='http://'">
-                <img src="../img/login/user.jpg" class="img-circle">
-                <a class="btn btn-link" role="button" href="#">황태형</a>
-            </span>
-        </ul> -->
-        </div>
-        <!--header--->
+        <!-- 헤더 -->
+		<c:import url="/WEB-INF/views/includes/header.jsp"></c:import>
+		
 
-        <!--nav-->
-         <div id="nav" class="clearfix">
-            <ul class="nav nav-tabs">
-                <li role="presentation" class="active"><a href="#">내 서평</a></li>
-                <li role="presentation"><a href="#">취향저격</a></li>
-                <!--세션 아이디와 사이트아이디 같을때-->
-                <li role="presentation"><a href="#">통계</a></li>
-            </ul>
-        </div>
-        <!--/nav-->
+        <!-- ------nav------ -->
+        <div id="nav" class="clearfix">
+		      <ul class="nav nav-tabs">
+		          <li role="presentation"><a href="">내 서평</a></li>
+		          <li role="presentation" class="active"><a href="">취향저격</a></li>
+		          <!--세션 아이디와 사이트아이디 같을때-->
+		          <li role="presentation"><a href="">통계</a></li>
+		      </ul>
+		      <!-- 세션아이디랑 다를때는
+		      <ul class="nav nav-tabs">
+		          <li role="presentation"><a href="">'유저이름'님의 서평</a></li>
+		          <li role="presentation" class="active"><a href="">취향저격</a></li>
+		      </ul>	       
+		       -->
+ 		</div>
+       <!-- ------nav------ -->
 
 
-        <ul id="nav2" class="nav nav-pills">
-            <!-- 세션아이디와 비교, 다를경우 '이름님의 취향' -->
-            <!-- <li role="presentation" class="active"><a href="#">'유저이름'님의 취향</a></li> -->
-            <li role="presentation" class="active"><a href="#">my 취향</a></li>
-            <li role="presentation"><a href="#">좋아요한 서평</a></li>
-            <li role="presentation"><a href="#">관심가는 책</a></li>
-            <!-- 세션아이디와 비교, 같은 사람일경우에만 보이게 -->
-            <li role="presentation"><a href="#">통계</a></li>
-        </ul>
+        <!-- ------nav2------ -->
+		<ul id="nav2" class="nav nav-pills">
+			<!-- 세션아이디와 비교, 다를경우 '이름님의 취향' -->
+			<!-- <li role="presentation" class="active"><a href="">'유저이름'님의 취향</a></li> -->
+			<li role="presentation"><a href="">my 취향</a></li>
+			<li role="presentation"><a href="">좋아요한 서평</a></li>
+			<li role="presentation"><a href="">관심가는 책</a></li>
+			<li role="presentation" class="active"><a href="">플레이리스트</a></li>
+			<!-- 세션아이디와 비교, 같은 사람일경우에만 보이게 -->
+			<li role="presentation"><a href="">통계</a></li>
+		</ul>
 
         <div class="contents" class="clearfix">
             <div class="index">
@@ -114,14 +109,7 @@
 
 
         <!-- footer -->
-        <div id="footer">
-            <p>
-                copyright ⓒ 2022 Randombook Player. All right reserved<br>
-
-                4조 Randombook | 황희원 이영림 황인경 김지연 장서윤
-            </p>
-            <a href="">FAQ</a><a href="">서비스소개</a>
-        </div>
+		<c:import url="/WEB-INF/views/includes/footer.jsp"></c:import>
 
     </div>
 
