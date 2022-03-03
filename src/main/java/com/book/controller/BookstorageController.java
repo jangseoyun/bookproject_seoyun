@@ -8,22 +8,27 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @RequestMapping("/book")
 public class BookstorageController {
 	
-	//=================사용자 서평=======================================
-	@RequestMapping("/review")
-	public String myReview() {
-		
-		System.out.println("Controller.bookStorage.reivew 실행");
-		
-		return "bookStorage/bookReview";
-	}
-	
 	//=================책 상세페이지=======================================
 	@RequestMapping("/detail")
 	public String bookDetail() {
 		
-		System.out.println("Controller.bookDetail 실행");
+		System.out.println("Controller.bookStorage.detail 실행");
 		
 		return "bookStorage/bookDetail";
 	}
+	
+	//=================내서재 -> 내서평=======================================
+	@RequestMapping("/review")
+	public String myReview() {
+		
+		System.out.println("Controller.bookStorage.review 실행");
+		
+		return "bookStorage/bookReview";
+	}
+	
+	
+	
+	
+	
 
 }

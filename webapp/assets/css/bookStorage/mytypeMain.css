@@ -1,5 +1,6 @@
 @charset "UTF-8";
 
+
 /* -------사이트 전체 적용------- */
 body, div, ul, li, dl, dt, ol, h1, h2, h3, h4, h5, 
 h6, input, fieldset, legend, p, select, table, th, 
@@ -44,7 +45,18 @@ body {
 a:hover{
     cursor: pointer;
 }
+/* 말줄임 */
+.word {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 5;
+    -webkit-box-orient: vertical;
 
+    white-space: normal;
+    word-wrap : break-word; 
+    /* line-height: 1.2; */
+}
 
 
 /* ---------------레이아웃-------------- */
@@ -53,6 +65,15 @@ a:hover{
     /* border: 2px solid #000000; */
     padding: 30px 0px 30px 0px;
     /* border-bottom: 2px solid #dddddd; */
+}
+
+#contents {
+    padding: 10px 0px 40px 0px;
+    margin-bottom: 40px;
+
+    border-bottom-style: solid;
+    border-bottom-width: 2px;
+    border-bottom-color: #e4e4e4;
 }
 
 /* ---------헤더---------- */
@@ -94,97 +115,69 @@ a:hover{
 #nav li{
     font-size: 18px;
     font-weight: bold;
-   
 }
 
-/*서평페이지 한정*/
-/* ------------content---------------- */
-#content {
-    padding : 20px 25px;
-    width: 753px;
-}
-#list>ul{
-    display: inline-block;
-    list-style-type: disc;
-    margin : 0px;
-    padding : 0px 0px 0px 20px;    
-    vertical-align: middle;
-}
-#list{
-    width: 703px ;
-}
-#list>ul>li{
-    margin: 0px 15px 0px 5px;
-    float: left;
-    color: #309BF8;
-}
-#list>ul>li span{
-    position:relative;
-    left:-0.5em;
-    color: #707070;
-}
-#list>span{
-    text-align: right;
-    margin: 0px 5px 0px 460px;
+
+/****************nav2*****************/
+#nav2>li{
+    width: 115px;
+    text-align: center;
     font-size: 15px;
-    vertical-align: middle;
+    
 }
-#category {
-    display: inline-block;
-}
-#category>button{
-    text-align: right;
-    padding: 2px 6px;
-    font-size: 12px;
-    color: #707070 !important;
-}
-#category li a{
-    color: #B4B4B4 !important;
-}
-#writebox {
-    border-radius: 15px  !important ;
-    margin: 15px 0px 10px 0px !important;
-    padding: 30px 10px 0px 30px !important;
-    background-color: rgba(48, 155, 248, 0.2) !important;
-    height : 180px;
-}
-#writebox h1 {
-    font-size: 25px  !important ;
+#nav2>li.active>a{
+    background-color: none;
+    color: #2699FB;
     font-weight: bold;
-    color: rgba(38, 153, 251, 1)  !important ;
-    margin-bottom: 15px !important;
-}
-#writebox>p>a{
-    background-color : rgba(38, 153, 251, 1);
-    border: rgba(38, 153, 251, 1);
-}
-#writebox p {
-    font-size: 15px !important ;
-    padding : 0px !important;
-    color: #888888;
-}
-#content>ul>a {
-    padding : 0px 10px 0px 10px;
 }
 
-
-/*************서평****************/
+/******************content********************/
+#content{
+    padding: 20px 25px;
+}
 .left{
     float: left;
 }
 .right{
     float: right;
 }
+/**********컨텐츠 공통**********/
+#content>div{
+    margin-bottom: 20px;
+}
+#content>div>div{
+    margin-bottom: 30px;
+}
+.minicontent{
+    width: 1080px;
+    height: 25px;
+}
+.minicontent div p{
+    display: inline-block;
+    font-weight: bold;
+    font-size: 20px;
+    color : #707070;
+    
+}
+.minicontent>#more>p{
+    font-size: 15px;
+    color: #ABAAAC;
+    margin-top: 5px;
+    
+}
+
+
+/*************컨텐츠1 : 서평****************/
 #reviews{
-    width: 700px;
-    margin : 10px 0px;
+    width: 1050px;
+    margin : 15px 10px;
     background-color: #e7e7e7;
     padding : 15px 30px;
     border-radius: 15px;
 }
 #reviews-header{
     /*********리뷰박스크기따라조정할것*********/
-    width: 640px;
+    width: 990px;
     height : 25px;
     margin-bottom : 3px;
 }
@@ -215,6 +208,7 @@ a:hover{
     margin: 0px 0px 10px 0px;
 }
 #reviews-content>p{
+    width: 800px;
     margin-bottom: 5px;
 }
 #reviews-content>span{
@@ -223,7 +217,7 @@ a:hover{
 }
 #reviews-footer{
     /*********리뷰박스크기따라조정할것*********/
-    width: 640px;
+    width: 990px;
     height : 15px;
     color: #ABAAAC;
     margin-top : 10px;
@@ -251,65 +245,126 @@ a:hover{
     font-size: 20px;
 }
 
-
-/* ------------aside---------------- */
-#profile-box {
-    width: 373px;
-    margin : 35px 5px 20px 5px;
-}
-#profile {
-    margin : 0px auto;
+/*************컨텐츠2:작가*****************/
+#content2>div{
     text-align: center;
 }
-#profile-image{
-    margin : 40px 0px 20px 0px;
-    width: 100px;
+#content2>div>.likewriter{
+    display: inline-block;
+    width: 250px;
+    height: 400px;
+    margin: 5px 5px;
+    background-color: #e7e7e7;
+    border-radius: 15px;
+    text-align: center;
 }
-#profile-title{
-    color:#888888;
+#content2>div>.likewriter>img{
+    display:inline-block;
+    margin-top: 60px;
+    border:3px solid #309BF8;
+    height:120px;
+    width:120px;
+}
+#writerinfo>h1{
+    margin-top: 10px;
+    font-size: 15px;
     font-weight: bold;
-    font-size: 17px;
+    color:#707070;
 }
-#username {
-    margin : 0px auto;
-    font-size: 17px;
+#writerinfo>p{
+    margin-top: 3px;
+    font-size: 13px;
+    color:#919191;
+}
+.likewriter>p{
+    margin: 20px 0px;
+    width: 250px;
+    height: 100px;
+    padding: 10px 50px;
     text-align: center;
-    font-weight: bold;
-    color:#888888;
-}
-#level {
-    width:304.66px;
-    text-align: center;
-    margin : 0 auto;
-    color:#888888;
-}
-#info {
-    width:304.66px;
-    text-align: center;
-    padding : 40px 0px 20px 0px;
-    margin : 0 auto;
-}
-#info>a{
-    margin : 0px 10px 0px 0px;
-    color:#888888;
+    font-size: 13px;
+    color:#707070; 
 }
 
-/* --------------footer------------- */
+
+/***********컨텐츠3************/
+#content3>#background>div{
+    margin-bottom: 20px;
+    background:linear-gradient(#FFFFFF00, #EAEAEA);
+    padding: 0px 10px;
+    text-align: center;
+}
+#content3>div img{
+    display:inline-block;
+    width: 190px;
+    height: 276px;
+    margin: 10px 5px 0px 5px;
+}
+
+/**************컨텐츠4****************/
+.index{
+    font-size: 15px;
+    color: #ABAAAC;
+    margin-left: 35px;
+}
+
+/*gallery*/
+#content4 #playlist{
+    padding: 0px 30px;
+    text-align: center;
+}
+
+.nail{
+    display: inline-block;
+    width: 180px;
+    height: 180px;
+    border-radius: 12px;
+    color:#ffffff;
+    text-align: left;
+    margin: 10px;
+}
+.nail>div{
+    display: table;
+    width: 180px;
+    height: 100px;
+}
+
+.purple{
+    background-color : #7656FD;
+}
+.deeppurple{
+    background-color : #63307E;
+}
+.green{
+    background-color:  #31A848;
+}
+
+.nail-desc{
+    padding:16px;
+    font-size: 14px;
+}
+
+#opac{
+    display: table-cell;
+    vertical-align: bottom;
+    background : #ffffff7c;
+    height: 80px; width:180px;
+    border-bottom-right-radius:12px;
+    border-bottom-left-radius:12px;
+
+}
+
+/****************footer******************/
 #footer {
     margin: 50px 0px 60px 0px;
     border-top : 2px solid #e4e4e4;
     padding: 15px 0px 0px 0px;
     color: #666666;
 }
-#footer>div{
-    float: left;
-}
+
 #footer>a {
     float: right;
-    margin: 18px 10px 0px 0px;
+    margin-right: 10px;
 }
-
-
-
 
 

@@ -1,4 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 
 <!DOCTYPE html>
 
@@ -13,33 +14,16 @@
 	    <script type="text/javascript" src="${pageContext.request.contextPath}/assets/js/jquery-1.12.4.js"></script>
 	    <link rel="stylesheet" href="${pageContext.request.contextPath}/assets/bootstrap/css/bootstrap.css">
 	    <script type="text/javascript" src="${pageContext.request.contextPath}/assets/bootstrap/js/bootstrap.js"></script>
-	
+		
 	    <link rel="stylesheet" href="${pageContext.request.contextPath}/assets/css/source/source.css" type="text/css">
+	    <link rel="stylesheet" href="${pageContext.request.contextPath}/assets/css/source/more-share-review.css" type="text/css">
 	    <link rel="stylesheet" href="${pageContext.request.contextPath}/assets/css/user/userAnalyze.css" type="text/css">
     </head>
 
     <body>
         <div id="wrap">
             <!-- ------헤더------ -->
-            <div id="header" class="clearfix">
-                <a href="">
-                    <img src="${pageContext.request.contextPath}/assets/images/logo/1_logo.png">
-                </a>
-                <!-- 로그인전 -->
-                <ul class="list-unstyled">
-                    <a class="btn btn-link" role="button" href="#">기록하기</a>
-                    <a class="btn btn-link" role="button" href="#">로그인</a>
-                </ul> 
-
-                <!-- 로그인후 -->
-                <!-- <ul class="list-unstyled">
-                    <a class="btn btn-link" role="button" href="#">기록하기</a>
-                    <span onclick="location.href='http://'">
-                        <img src="../img/login/user.jpg" class="img-circle">
-                        <a class="btn btn-link" role="button" href="#">황태형</a>
-                    </span>
-                </ul> -->
-            </div>
+            <c:import url="/WEB-INF/views/includes/header.jsp"></c:import>
             <!-- ------헤더------ -->
 
             <!-- ------네비게이션 바------ -->
@@ -237,11 +221,11 @@
                                     <!-- <span class="caret"></span> -->
                                 </a>
                                 <ul class="dropdown-menu radius-15" role="menu" aria-labelledby="dropdownMenu2">
-                                    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">플레이리스트에 추가<span id="plus">+</span></a></li>
+                                    <li role="presentation"><a role="menuitem" tabindex="-1" >플레이리스트에 추가<span id="plus">+</span></a></li>
                                     <li role="presentation" class="divider"></li>
-                                    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">서평 공유하기<span class="glyphicon glyphicon-share" aria-hidden="true"></span></a></li>
+                                    <li role="presentation"><a role="menuitem" tabindex="-1" id="shr_review">서평 공유하기<span class="glyphicon glyphicon-share" aria-hidden="true"></span></a></li>
                                     <li role="presentation" class="divider"></li>
-                                    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">이미지 저장하기<span class="glyphicon glyphicon-save" aria-hidden="true"></span></a></li>
+                                    <li role="presentation"><a role="menuitem" tabindex="-1" >이미지 저장하기<span class="glyphicon glyphicon-save" aria-hidden="true"></span></a></li>
                                 </ul>
                             </div>
                         </div>
@@ -252,22 +236,19 @@
                 <!-- ------------------------------- -->
             </div>
             <!-- ------------------------------- -->
+            
+            <!-- 더보기 more-share-reivew 모달창 -->
+            <c:import url="/WEB-INF/views/includes/modal/more-share-review.jsp"></c:import>
+            <!-- 더보기 more-share-reivew 모달창 -->
+            
             <!-- footer -->
-            <div id="footer">
-                <div>
-                    copyright ⓒ 2022 Randombook Player. All right reserved<br>
-
-                    4조 Randombook ｜ 황희원 이영림 황인경 김지연 장서윤
-                </div>
-                <a href="">FAQ</a><a href="">서비스소개</a>
-            </div>
+            <c:import url="/WEB-INF/views/includes/footer.jsp"></c:import>
+            <!-- footer -->
+            
         </div>
 
     </body>
 
-    <script>
-
-        
-    </script>
+    <script type="text/javascript" src="${pageContext.request.contextPath}/assets/js/more.js"></script>
 
 </html>

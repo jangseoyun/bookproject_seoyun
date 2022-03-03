@@ -1,4 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 
 <!DOCTYPE html>
 
@@ -21,25 +22,7 @@
     <div id="wrap">
 
         <!-- ------헤더------ -->
-        <div id="header" class="clearfix">
-            <a href="">
-                <img src="${pageContext.request.contextPath}/assets/images/logo/1_logo.png">
-            </a>
-            <!-- 로그인전 -->
-            <ul class="list-unstyled">
-                <a class="btn btn-link" role="button" href="#">기록하기</a>
-                <a class="btn btn-link" role="button" href="#">로그인</a>
-            </ul> 
-
-            <!-- 로그인후 -->
-            <!-- <ul class="list-unstyled">
-                <a class="btn btn-link" role="button" href="#">기록하기</a>
-                <span onclick="location.href='http://'">
-                    <img src="../img/login/user.jpg" class="img-circle">
-                    <a class="btn btn-link" role="button" href="#">황태형</a>
-                </span>
-            </ul> -->
-        </div>
+        <c:import url="/WEB-INF/views/includes/header.jsp"></c:import>
         <!-- ------헤더------ -->
 
         <div id="login_wrap">
@@ -69,7 +52,14 @@
                 <button type="button" class="btn btn-primary btn-lg btn-block btn-naverlogin">네이버로 로그인</button>
             </div>
         </div>
+        
+        <!-- footer -->
+	    <c:import url="/WEB-INF/views/includes/footer.jsp"></c:import>
+	    <!-- footer -->
+        
     </div>
+    
+    
     
 </body>
 </html>

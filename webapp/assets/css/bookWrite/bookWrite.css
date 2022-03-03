@@ -1,43 +1,7 @@
 @charset "UTF-8";
 
-/* 책 제목 */
-@font-face {
-    font-family: 'KOHIBaeumOTF';
-    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/KOHIBaeumOTF.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-}
-
-/* 서평 쓰기 */ 
-@font-face {
-    font-family: 'Nanum Myeongjo';
-    src: url('https://fonts.googleapis.com/css2?family=Nanum+Myeongjo&display=swap');
-    font-weight: normal;
-    font-style: normal;
-}
-
-/* ------- 사이트 전체 적용 ------- */
-body, div, ul, li, dl, dt, ol, h1, h2, h3, h4, h5, 
-h6, input, fieldset, legend, p, select, table, th, 
-td, tr, textarea, button, form {
-    margin: 0; padding: 0;
-}
-
-/* clearfix */
-.clearfix{*zoom:1;}
-.clearfix:before, .clearfix:after {display: block; content: ""; line-height: 0;}
-.clearfix:after {clear: both;}
-
-body {
-    font-family: 'MinSans-Medium';
-    font-size: 12px;
-}
 
 /* ----- 레이아웃 ----- */
-#wrap {
-    width: 1130px;
-    margin: 0px auto;
-}
 
 #container {
     padding: 40px 0px 10px 0px;
@@ -53,43 +17,6 @@ body {
     padding-bottom: 20px;
     margin-bottom: 20px;
 }
-
-/* ----- 레이아웃 ----- */
-
-
-/* ----- 헤더 ----- */
-#header {
-    background-color: #FFFFFF;
-    transition: opacity 1s;
-    padding: 30px 0px 30px 0px;
-}
-
-#header>a>img {
-    float: left;
-    width: 110px;
-    margin: 0px 40px 0px 10px;
-    cursor:pointer;
-}
-
-#header>ul>span>.img-circle {
-    width: 30px;
-    height: 30px;
-    cursor:pointer;
-}
-
-#header>ul>span {
-    cursor:pointer;
-}
-
-#header ul {
-    float: right;
-}
-
-#header>ul>li {
-    float:left;
-    padding: 10px 0px 10px 20px;
-}
-/* ----- /헤더 ----- */
 
 
 /* ----- progress bar ----- */
@@ -501,25 +428,6 @@ font-family: 'Nanum Myeongjo';
     font-family: 'MinSans-Medium';
    
 }
-
-/* ----- footer ----- */
-#footer {
-    margin: 50px 0px 60px 0px;
-    border-top : 2px solid #e4e4e4;
-    padding: 15px 0px 0px 0px;
-    color: #666666;
-}
-
-#footer>div{
-    float: left;
-}
-
-#footer>a {
-    float: right;
-    margin: 18px 10px 0px 0px;
-}
-/* ----- /footer ----- */
-
 
 /* -------progress bar 연습-------- */
 .progressbar-wrapper {

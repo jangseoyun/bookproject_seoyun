@@ -106,6 +106,30 @@ body {
     margin: 18px 10px 0px 0px;
 }
 
+/* ------------nav---------------- */
+#nav {
+    padding: 5px 0px 5px 0px;
+}
+#nav li{
+    font-size: 18px;
+    font-weight: bold;
+   
+}
+
+/* ------------nav2---------------- */
+#nav2>li{
+    width: 115px;
+    text-align: center;
+    font-size: 15px;
+    
+}
+
+#nav2>li.active>a{
+    background-color: none; 
+    color: #2699FB;
+    font-weight: bold;
+}
+
 /* ---------css 소스---------- */
 
 /* 버튼 및 색상 */
@@ -174,6 +198,11 @@ body {
     height: 25px;
 }
 
+/* 박스 테두리 곡선 */
+.radius-15 {
+    border-radius: 15px;
+}
+
 /* 박스 테두리 제거 */
 .line-none {border-style: none;}
 
@@ -186,4 +215,7 @@ body {
     border-right: 2px solid #9B9B9B;
 }
 
+.back-none {
+	background-color: none;
+}
 

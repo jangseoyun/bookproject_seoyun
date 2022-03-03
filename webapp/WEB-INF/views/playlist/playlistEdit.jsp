@@ -21,7 +21,9 @@
         <div id="container">
             <!---- header ----->
             <div id="header" class="clearfix">
-                <a><img src="${pageContext.request.contextPath}/assets/images/logo/1_logo.png"></a>
+                <a>
+                	<img src="${pageContext.request.contextPath}/assets/images/logo/1_logo.png">
+                </a>
             </div>
             <!---- //header ----->
 

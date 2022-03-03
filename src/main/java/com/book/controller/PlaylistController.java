@@ -8,6 +8,15 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public class PlaylistController {
 	
 	//=================메인=======================================
+	@RequestMapping("")
+	public String playlistMain() {
+		
+		System.out.println("Controller.playlist.edit 접근");
+		
+		return "playlist/playlistMain";
+	}
+	
+	//=================수정=======================================
 	@RequestMapping("/edit")
 	public String playlistEdit() {
 		
