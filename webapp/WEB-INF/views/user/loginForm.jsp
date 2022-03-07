@@ -32,17 +32,20 @@
                 <h2 class="login_h2">playbook으로 가볍게 떠먹어요</h2>
             </div>
 
-            <div>
-                <!-- 로그인 버튼 눌렀을 때 일치하지 않을 경우 -->
-                <p class="font_blue_2 txt_ms">*이메일 주소를 확인해주세요</p>
-                <input id="id"  class="login_input" type="text" name="" value="" placeholder="이메일 주소를 입력해 주세요">
-                
-                <!-- 로그인 버튼 눌렀을 때 일치하지 않을 경우 -->
-                <p class="font_blue_2 txt_ms">*비밀번호를 확인해주세요</p>
-                <input id="password" class="login_input" type="text" name="" value="" placeholder="비밀번호를 입력해 주세요">
+			<form method="get" action="${pageContext.request.contextPath}/user/login">
+	            <div>
+	                <!-- 로그인 버튼 눌렀을 때 일치하지 않을 경우 -->
+	                <!-- <p class="font_blue_2 txt_ms">*이메일 주소를 확인해주세요</p> -->
+	                <input id="id"  class="login_input" type="text" name="email" value="" placeholder="이메일 주소를 입력해 주세요">
+	                
+	                <!-- 로그인 버튼 눌렀을 때 일치하지 않을 경우 -->
+	                <!-- <p class="font_blue_2 txt_ms">*비밀번호를 확인해주세요</p> -->
+	                <input id="password" class="login_input" type="text" name="password" value="" placeholder="비밀번호를 입력해 주세요">
+	            </div>
+	            <button type="submit" class="btn btn-primary btn-lg btn-block blue-2 line-none btn-login">로그인</button>
+            </form>
+            
 
-                <button type="button" class="btn btn-primary btn-lg btn-block blue-2 line-none btn-login">로그인</button>
-            </div>
             <div>
                 <div id="login_find">
                     <span>아이디찾기</span>

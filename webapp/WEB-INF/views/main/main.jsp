@@ -22,12 +22,12 @@
             </div>
             <div class="links-container">
                 <ul class="links">
-                    <li><a href="">기록하기</a></li>
+                    <li><a href="${pageContext.request.contextPath}/write">기록하기</a></li>
                     <li class="login">
                         <div class="userImg">
                             <img src="${pageContext.request.contextPath}/assets/images/user/profile.png" alt="">
                         </div>
-                        <a href="">로그인</a>
+                        <a href="${pageContext.request.contextPath}/user/loginForm">로그인</a>
                     </li>
                 </ul>
             </div>
@@ -130,7 +130,7 @@
     <aside class="sidebar">
         <div class="sidebar-header">
             <div class="nav-header">
-                <h1 class="sidebar-logo">SYB</h1>
+                <h1 class="sidebar-logo">BOGGLE</h1>
             </div>
             <button type="button" class="close-btn">
                 <i class="fa-solid fa-xmark"></i>

@@ -4,13 +4,24 @@
 
 <mapper namespace="user">
    <!-- 쿼리문 작성 -->
-   
    <!-- <select id="" resultMap="" >
 		<![CDATA[
 			
 			
 		]]>
 	</select> -->
+	
+	<!-- 로그인 -->
+	<select id="getUser" parameterType="com.book.vo.UserVo" resultType="com.book.vo.UserVo">
+		<![CDATA[
+			select  user_no userNo,
+        			nickname nickName,
+        			email
+			from users
+			where email = #{email}
+			and password = #{password}
+		]]>
+	</select>
 	
 	
 </mapper>

@@ -4,10 +4,11 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
+@RequestMapping("/index")
 public class MainController {
 	
 	//=================메인=======================================
-	@RequestMapping("/index")
+	@RequestMapping("")
 	public String bookDetail() {
 		
 		System.out.println("Controller.main 접근");

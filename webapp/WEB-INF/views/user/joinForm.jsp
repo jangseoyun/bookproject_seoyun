@@ -37,12 +37,12 @@
                     <div id="join-api" class="col-xs-5">
                         <div>
                             <div>
-                                <img src="/bookproject/asset/img/facebooklogo.png"> 페이스북으로 회원가입
+                                <img src="${pageContext.request.contextPath}/assets/images/user/facebooklogo.png"> 페이스북으로 회원가입
                             </div>
                         </div>
                         <div>
                             <div>
-                                <img src="/bookproject/asset/img/naverlogo.png"> 네이버로 회원가입
+                                <img src="${pageContext.request.contextPath}/assets/images/user/naverlogo.png"> 네이버로 회원가입
                             </div>
                         </div>
                     </div>

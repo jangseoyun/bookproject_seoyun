@@ -6,6 +6,6 @@
 	</typeAliases>
 	<mappers>
 		<!-- 필요하면 늘려가면서 사용할 수 있음 -->
-		<!-- <mapper resource="mybatis/mappers/login.xml" /> -->
+		<mapper resource="mybatis/mappers/user.xml" />
 	</mappers>
 </configuration>

@@ -25,7 +25,7 @@ public class MytypeController {
 		return "mytype/mytype-book";
 	}
 	
-	//================= 취향저격 -> 관심가는책 =======================================
+	//================= 취향저격 -> 좋아요한 서평=======================================
 	@RequestMapping("/review")
 	public String mytypeReview() {
 		
