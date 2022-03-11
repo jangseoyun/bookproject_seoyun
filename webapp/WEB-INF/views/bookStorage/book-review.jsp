@@ -38,7 +38,7 @@
                         <div id="writebox" class="jumbotron">
                             <h1>서평 기록하기</h1>
                             <p>'유저이름'님 오늘은 어떤 책을 읽으셨나요?</p>
-                            <p><a class="btn btn-primary btn-md" href="#" role="button">기록하기</a></p>
+                            <p><a class="btn btn-primary btn-md" href="${pageContext.request.contextPath}/write" role="button">기록하기</a></p>
                         </div>
                         <!-- list -->
                         <div id="list">

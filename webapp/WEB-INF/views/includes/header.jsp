@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 
-<div id="header" class="clearfix">
+<div id="header">
 	
 	<!-- 메인로고 -->
 	<a href="${pageContext.request.contextPath}/index"> 
@@ -9,7 +9,6 @@
 	</a>
 	
 	<c:choose>
-	
 		<c:when test="${authUser == null}">
 			<!-- 로그인전 -->
 			<ul class="list-unstyled">
@@ -31,7 +30,6 @@
 				</li>
 			</ul>
 		</c:otherwise>
-		
 	</c:choose>
 	
 

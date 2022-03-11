@@ -26,14 +26,18 @@
             <c:import url="/WEB-INF/views/includes/header.jsp"></c:import>
             <!-- ------헤더------ -->
 
+			<!-- ------nav------ -->
+            <c:import url="/WEB-INF/views/includes/nav-top.jsp"></c:import>
+            <!-- ------nav------ -->
+            
             <!-- ------네비게이션 바------ -->
-            <div id="nav" class="clearfix">
+            <!-- <div id="nav" class="clearfix">
                 <ul class="nav nav-tabs nav-lg">
                     <li role="presentation"><a href="#">서평</a></li>
                     <li role="presentation"><a href="#">취향저격</a></li>
                     <li role="presentation" class="active"><a href="#">통계</a></li>
                 </ul>
-            </div>
+            </div> -->
             <!-- <ul class="nav nav-pills">
                 <li role="presentation" class="active"><a href="#">서평</a></li>
                 <li role="presentation"><a href="#">취향저격</a></li>
